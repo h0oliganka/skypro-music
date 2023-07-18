@@ -6,18 +6,18 @@ import Search from "./search";
 import Sidebar from "./sidebar";
 
 function Main() {
-  <div class="wrapper">
-    <div class="container">
-      <main class="main">
+  <div className="wrapper">
+    <div className="container">
+      <main className="main">
         <Nav />
-        <div class="main__centerblock centerblock">
+        <div className="main__centerblock centerblock">
           <Search />
           <Content />
         </div>
         <Sidebar />
       </main>
       <Bar />
-      <footer class="footer"></footer>
+      <footer className="footer"></footer>
     </div>
   </div>;
 }
