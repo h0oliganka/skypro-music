@@ -1,6 +1,7 @@
 import React from "react";
 
 function Search() {
+  return (
   <>
     <div className="centerblock__search search">
       <svg className="search__svg">
@@ -20,7 +21,8 @@ function Search() {
       <div className="filter__button button-year _btn-text">году выпуска</div>
       <div className="filter__button button-genre _btn-text">жанру</div>
     </div>
-  </>;
+  </>
+  )
 }
 
 export default Search;

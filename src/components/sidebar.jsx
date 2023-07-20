@@ -1,6 +1,7 @@
 import React from "react";
 
 function Sidebar() {
+  return (
   <div className="main__sidebar sidebar">
     <div className="sidebar__personal">
       <p className="sidebar__personal-name">Sergey.Ivanov</p>
@@ -37,7 +38,8 @@ function Sidebar() {
         </div>
       </div>
     </div>
-  </div>;
+  </div>
+  )
 }
 
 export default Sidebar;

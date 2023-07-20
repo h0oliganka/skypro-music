@@ -1,6 +1,7 @@
 import React from "react";
 
 function Bar() {
+  return (
   <div className="bar">
     <div className="bar__content">
       <div className="bar__player-progress"></div>
@@ -85,7 +86,8 @@ function Bar() {
         </div>
       </div>
     </div>
-  </div>;
+  </div>
+  )
 }
 
 export default Bar;

@@ -1,6 +1,7 @@
 import React from "react";
 
 function Playlist() {
+  return (
   <div className="content__playlist playlist">
     <div className="playlist__item">
       <div className="playlist__track track">
@@ -367,7 +368,8 @@ function Playlist() {
         </div>
       </div>
     </div>
-  </div>;
+  </div>
+  )
 }
 
 export default Playlist;
