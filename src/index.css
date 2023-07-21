@@ -147,6 +147,8 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  background-color: rgba(28, 28, 28, 0);
+  border: none;
 }
 
 .nav__menu {

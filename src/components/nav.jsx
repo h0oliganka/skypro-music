@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function Nav() {
   return (
@@ -6,11 +6,11 @@ function Nav() {
       <div className="nav__logo logo">
         <img className="logo__image" src="img/logo.png" alt="logo" />
       </div>
-      <div className="nav__burger burger">
+      <button className="nav__burger burger">
         <span className="burger__line"></span>
         <span className="burger__line"></span>
         <span className="burger__line"></span>
-      </div>
+      </button>
       <div className="nav__menu menu">
         <ul className="menu__list">
           <li className="menu__item">
@@ -31,7 +31,10 @@ function Nav() {
         </ul>
       </div>
     </nav>
-  );
+  )
 }
 
-export default Nav;
+export default Nav
+
+const burger__click = document.querySelector('nav__burger')
+
