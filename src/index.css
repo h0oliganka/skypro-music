@@ -309,6 +309,8 @@ body {
   border: 1px solid #ffffff;
   border-radius: 60px;
   padding: 6px 20px;
+  background-color: rgba(28, 28, 28, 0);
+  color: #fff;
 }
 
 .filter__button:not(:last-child) {
