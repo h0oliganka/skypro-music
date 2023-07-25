@@ -1,5 +1,5 @@
-function filterGenre() {
+function FilterGenre() {
     return <div className="centerblock__filter_item_text">pop</div>
 }
 
-export default filterGenre
+export default FilterGenre

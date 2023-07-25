@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import React from 'react'
-import filterAuthor from './filterAuthor'
+import FilterAuthor from './filterAuthor'
 
 function Search() {
   const [visibleFilter, setVisibleFilter] = useState(null)
@@ -31,7 +31,6 @@ function Search() {
             onClick={() => {
               toggleVisibleFilter('author')
             }}
-            value="author"
             type="button"
             className={
               visibleFilter === 'author'
@@ -41,7 +40,7 @@ function Search() {
           >
             исполнителю
           </button>
-          {visibleFilter === 'author' && <filterAuthor />}
+          {visibleFilter === 'author' && <FilterAuthor />}
         </div>
         <button className="filter__button button-year _btn-text">
           году выпуска
