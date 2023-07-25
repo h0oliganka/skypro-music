@@ -224,6 +224,26 @@ body {
   margin-bottom: 51px;
 }
 
+.centerblock__filter_item_text {
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 34px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  background: #313131;
+  width: 248px;
+  height: 305px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 50px;
+  opacity: 0;
+  animation: ani 0.3s forwards;
+}
+
 .centerblock__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -316,6 +336,11 @@ body {
 
 .filter__button:not(:last-child) {
   margin-right: 10px;
+}
+
+.button__active {
+  border-color: #d9b6ff;
+  color: #d9b6ff;
 }
 
 .content__title {
