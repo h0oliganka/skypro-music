@@ -395,7 +395,6 @@ body {
   flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -412,7 +411,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 447px;
+  width: 457px;
 }
 
 .track__title-image {
@@ -456,7 +455,7 @@ body {
 }
 
 .track__author {
-  width: 321px;
+  width: 330px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -475,7 +474,7 @@ body {
 }
 
 .track__album {
-  width: 245px;
+  width: 320px;
 }
 
 .track__album-link {

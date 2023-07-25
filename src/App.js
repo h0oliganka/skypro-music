@@ -1,9 +1,14 @@
-import Main from "./components/main";
+import Main from './components/main'
+import { useEffect, useState } from 'react'
 
 function App() {
-  return (
-  <Main />
-  );
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000)
+  })
+
+  return <Main loading={loading} />
 }
 
-export default App;
+export default App

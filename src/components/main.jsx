@@ -5,7 +5,7 @@ import Nav from './nav'
 import Search from './search'
 import Sidebar from './sidebar'
 
-function Main() {
+function Main({ loading }) {
   return (
     <div className="wrapper">
       <div className="container">
@@ -13,7 +13,7 @@ function Main() {
           <Nav />
           <div className="main__centerblock centerblock">
             <Search />
-            <Content />
+            <Content loading={loading} />
           </div>
           <Sidebar />
         </main>
