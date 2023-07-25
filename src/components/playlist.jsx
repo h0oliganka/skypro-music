@@ -13,7 +13,7 @@ function Playlist({ loading }) {
               </div>
               <div className="track__title-text">
                 <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
+                  <Skeleton width="280px" height="20px" />
                   <span className="track__title-span" />
                 </a>
               </div>
@@ -25,7 +25,7 @@ function Playlist({ loading }) {
             </div>
             <div className="track__album">
               <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
+                <Skeleton width="280px" height="20px" />
               </a>
             </div>
           </div>
@@ -37,7 +37,7 @@ function Playlist({ loading }) {
               </div>
               <div className="track__title-text">
                 <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
+                  <Skeleton width="280px" height="20px" />
                   <span className="track__title-span" />
                 </a>
               </div>
@@ -49,7 +49,7 @@ function Playlist({ loading }) {
             </div>
             <div className="track__album">
               <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
+                <Skeleton width="280px" height="20px" />
               </a>
             </div>
           </div>
@@ -61,7 +61,7 @@ function Playlist({ loading }) {
               </div>
               <div className="track__title-text">
                 <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
+                  <Skeleton width="280px" height="20px" />
                   <span className="track__title-span" />
                 </a>
               </div>
@@ -73,7 +73,7 @@ function Playlist({ loading }) {
             </div>
             <div className="track__album">
               <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
+                <Skeleton width="280px" height="20px" />
               </a>
             </div>
           </div>
@@ -85,7 +85,7 @@ function Playlist({ loading }) {
               </div>
               <div className="track__title-text">
                 <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
+                  <Skeleton width="280px" height="20px" />
                   <span className="track__title-span" />
                 </a>
               </div>
@@ -97,7 +97,7 @@ function Playlist({ loading }) {
             </div>
             <div className="track__album">
               <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
+                <Skeleton width="280px" height="20px" />
               </a>
             </div>
           </div>
@@ -109,7 +109,7 @@ function Playlist({ loading }) {
               </div>
               <div className="track__title-text">
                 <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
+                  <Skeleton width="280px" height="20px" />
                   <span className="track__title-span" />
                 </a>
               </div>
@@ -121,7 +121,7 @@ function Playlist({ loading }) {
             </div>
             <div className="track__album">
               <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
+                <Skeleton width="280px" height="20px" />
               </a>
             </div>
           </div>
@@ -133,7 +133,7 @@ function Playlist({ loading }) {
               </div>
               <div className="track__title-text">
                 <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
+                  <Skeleton width="280px" height="20px" />
                   <span className="track__title-span" />
                 </a>
               </div>
@@ -145,7 +145,7 @@ function Playlist({ loading }) {
             </div>
             <div className="track__album">
               <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
+                <Skeleton width="280px" height="20px" />
               </a>
             </div>
           </div>
@@ -157,7 +157,7 @@ function Playlist({ loading }) {
               </div>
               <div className="track__title-text">
                 <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
+                  <Skeleton width="280px" height="20px" />
                   <span className="track__title-span" />
                 </a>
               </div>
@@ -169,7 +169,7 @@ function Playlist({ loading }) {
             </div>
             <div className="track__album">
               <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
+                <Skeleton width="280px" height="20px" />
               </a>
             </div>
           </div>
@@ -181,7 +181,7 @@ function Playlist({ loading }) {
               </div>
               <div className="track__title-text">
                 <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
+                  <Skeleton width="280px" height="20px" />
                   <span className="track__title-span" />
                 </a>
               </div>
@@ -193,7 +193,7 @@ function Playlist({ loading }) {
             </div>
             <div className="track__album">
               <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
+                <Skeleton width="280px" height="20px" />
               </a>
             </div>
           </div>
@@ -205,7 +205,7 @@ function Playlist({ loading }) {
               </div>
               <div className="track__title-text">
                 <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
+                  <Skeleton width="280px" height="20px" />
                   <span className="track__title-span" />
                 </a>
               </div>
@@ -217,319 +217,7 @@ function Playlist({ loading }) {
             </div>
             <div className="track__album">
               <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
-              </a>
-            </div>
-          </div>
-          <br></br>
-          <div className="playlist__track track">
-            <div className="track__title">
-              <div className="track__title-image">
-                <svg className="track__title-svg" alt="music" />
-              </div>
-              <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                  <Skeleton width="330px" height="20px" />
-                  <span className="track__title-span" />
-                </a>
-              </div>
-            </div>
-            <div className="track__author">
-              <a className="track__author-link" href="http://">
-                <Skeleton width="266px" height="20px" />
-              </a>
-            </div>
-            <div className="track__album">
-              <a className="track__album-link" href="http://">
-                <Skeleton width="320px" height="20px" />
+                <Skeleton width="280px" height="20px" />
               </a>
             </div>
           </div>
@@ -869,40 +557,6 @@ function Playlist({ loading }) {
                   <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
                 </svg>
                 <span className="track__time-text">3:36</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="playlist__item">
-            <div className="playlist__track track">
-              <div className="track__title">
-                <div className="track__title-image">
-                  <svg className="track__title-svg" alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
-                  </svg>
-                </div>
-                <div className="track__title-text">
-                  <a className="track__title-link" href="http://">
-                    {' '}
-                    <span className="track__title-span"></span>
-                  </a>
-                </div>
-              </div>
-              <div className="track__author">
-                <a className="track__author-link" href="http://">
-                  {' '}
-                </a>
-              </div>
-              <div className="track__album">
-                <a className="track__album-link" href="http://">
-                  {' '}
-                </a>
-              </div>
-              <div className="track__time">
-                <svg className="track__time-svg" alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
-                </svg>
-                <span className="track__time-text"></span>
               </div>
             </div>
           </div>

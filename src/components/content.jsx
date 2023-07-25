@@ -1,8 +1,7 @@
 import React from 'react'
 import Playlist from './playlist'
 
-function Content(loading) {
-  
+function Content({ loading }) {
   return (
     <div className="centerblock__content">
       <div className="centerblock__content">

@@ -15,7 +15,7 @@ function Main({ loading }) {
             <Search />
             <Content loading={loading} />
           </div>
-          <Sidebar />
+          <Sidebar loading={loading} />
         </main>
         <Bar />
         <footer className="footer"></footer>

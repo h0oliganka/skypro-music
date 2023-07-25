@@ -232,6 +232,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  width: 1000px;
 }
 
 .search__svg {
@@ -411,7 +412,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 457px;
+  width: 410px;
 }
 
 .track__title-image {
@@ -455,7 +456,7 @@ body {
 }
 
 .track__author {
-  width: 330px;
+  width: 305px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,7 +475,7 @@ body {
 }
 
 .track__album {
-  width: 320px;
+  width: 280px;
 }
 
 .track__album-link {
