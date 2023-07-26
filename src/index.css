@@ -254,6 +254,23 @@ body {
   width: 1000px;
 }
 
+.filterAuthorLink {
+  color: #fff;
+}
+
+.filterAuthorLink:hover {
+  border-color: #d9b6ff;
+  color: #d9b6ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.filterAuthorLink:active {
+  border-color: #ad61ff;
+  color: #ad61ff;
+  cursor: pointer;
+}
+
 .search__svg {
   width: 17px;
   height: 17px;
@@ -338,8 +355,9 @@ body {
 }
 
 .button__active {
-  border-color: #d9b6ff;
-  color: #d9b6ff;
+  border-color: #ad61ff;
+  color: #ad61ff;
+  cursor: pointer;
 }
 
 .content__title {

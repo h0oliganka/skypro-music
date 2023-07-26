@@ -42,7 +42,7 @@ function Search() {
           >
             исполнителю
           </button>
-          {visibleFilter === 'author' && <div><FilterAuthor /></div>}
+          {visibleFilter === 'author' && <FilterAuthor />}
 
           <button
             onClick={() => {
@@ -58,7 +58,7 @@ function Search() {
           >
             году выпуска
           </button>
-          {visibleFilter === 'year' && <div><FilterYear /></div>}
+          {visibleFilter === 'year' && <FilterYear />}
 
           <button
             onClick={() => {
@@ -74,7 +74,7 @@ function Search() {
           >
             жанру
           </button>
-          {visibleFilter === 'year' && <div><FilterGenre /></div>}
+          {visibleFilter === 'genre' && <FilterGenre />}
 
         </div>
       </div>
