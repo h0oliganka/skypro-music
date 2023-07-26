@@ -244,6 +244,31 @@ body {
   overflow-y: scroll
 }
 
+input[type="range"] {
+  accent-color: #fff;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 3px;
+  background-color: #fff;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+input[type=range]::-moz-range-track {
+  height: 5px;
+  background-color: #fff;
+}
+
+input[type=range]::-moz-range-thumb {
+  color: white;
+  background: #ecf0f1;
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   height: 5px; /* высота для горизонтального скролла */
   background-color: #252525;
@@ -938,6 +963,7 @@ body {
 
 .volume__progress {
   width: 109px;
+  padding-bottom: 9px
 }
 
 .volume__progress-line {

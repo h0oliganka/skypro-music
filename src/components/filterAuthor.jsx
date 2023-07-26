@@ -6,7 +6,10 @@ function FilterAuthor() {
     <a className="filtersButton" href="">Dynoro, Outwork, Mr. Gee</a>
     <a className="filtersButton" href="">minthaze</a>
     <a className="filtersButton" href="">Tom Boxer</a>
-    <a className="filtersButton" href="">minthaze</a>
+    <a className="filtersButton" href="">Стоункат, Psychopath</a>
+    <a className="filtersButton" href="">Jaded, Will Clarke, AR/CO</a>
+    <a className="filtersButton" href="">Blue Foundation, Zeds Dead</a>
+    <a className="filtersButton" href="">HYBIT, Mr. Black, Offer Nissim, Hi Profile</a>
   </div>
 }
 
