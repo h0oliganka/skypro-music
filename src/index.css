@@ -254,18 +254,20 @@ body {
   width: 1000px;
 }
 
-.filterAuthorLink {
+.filtersButton {
+  background-color: rgba(28, 28, 28, 0);
   color: #fff;
+  outline: none;
 }
 
-.filterAuthorLink:hover {
+.filtersButton:hover {
   border-color: #d9b6ff;
   color: #d9b6ff;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.filterAuthorLink:active {
+.filtersButton:active {
   border-color: #ad61ff;
   color: #ad61ff;
   cursor: pointer;
