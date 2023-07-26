@@ -28,54 +28,60 @@ function Search() {
       <div className="centerblock__filter filter">
         <div className="filter__title">Искать по:</div>
         <div className="centerblock__filter_item">
-          <button
-            onClick={() => {
-              toggleVisibleFilter('author')
-            }}
-            value="author"
-            type="button"
-            className={
-              visibleFilter === 'author'
-                ? 'filter__button button-author _btn-text button__active'
-                : 'filter__button button-author _btn-text'
-            }
-          >
-            исполнителю
-          </button>
-          {visibleFilter === 'author' && <FilterAuthor />}
 
-          <button
-            onClick={() => {
-              toggleVisibleFilter('year')
-            }}
-            value="year"
-            type="button"
-            className={
-              visibleFilter === 'year'
-                ? 'filter__button button-year _btn-text button__active'
-                : 'filter__button button-year _btn-text'
-            }
-          >
-            году выпуска
-          </button>
-          {visibleFilter === 'year' && <FilterYear />}
+          <div className="centerblock__filter_item">
+            <button
+              onClick={() => {
+                toggleVisibleFilter('author')
+              }}
+              value="author"
+              type="button"
+              className={
+                visibleFilter === 'author'
+                  ? 'filter__button button-author _btn-text button__active'
+                  : 'filter__button button-author _btn-text'
+              }
+            >
+              исполнителю
+            </button>
+            {visibleFilter === 'author' && <FilterAuthor />}
+          </div>
 
-          <button
-            onClick={() => {
-              toggleVisibleFilter('genre')
-            }}
-            value="genre"
-            type="button"
-            className={
-              visibleFilter === 'genre'
-                ? 'filter__button button-genre _btn-text button__active'
-                : 'filter__button button-genre _btn-text'
-            }
-          >
-            жанру
-          </button>
-          {visibleFilter === 'genre' && <FilterGenre />}
+          <div className="centerblock__filter_item">
+            <button
+              onClick={() => {
+                toggleVisibleFilter('year')
+              }}
+              value="year"
+              type="button"
+              className={
+                visibleFilter === 'year'
+                  ? 'filter__button button-year _btn-text button__active'
+                  : 'filter__button button-year _btn-text'
+              }
+            >
+              году выпуска
+            </button>
+            {visibleFilter === 'year' && <FilterYear />}
+          </div>
 
+          <div className="centerblock__filter_item">
+            <button
+              onClick={() => {
+                toggleVisibleFilter('genre')
+              }}
+              value="genre"
+              type="button"
+              className={
+                visibleFilter === 'genre'
+                  ? 'filter__button button-genre _btn-text button__active'
+                  : 'filter__button button-genre _btn-text'
+              }
+            >
+              жанру
+            </button>
+            {visibleFilter === 'genre' && <FilterGenre />}
+          </div>
         </div>
       </div>
     </>
