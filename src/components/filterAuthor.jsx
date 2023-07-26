@@ -1,5 +1,5 @@
 function FilterAuthor() {
-  return <div >Michael Jackson</div>
+  return <div className="centerblock__filter_item_text">Michael Jackson</div>
 }
 
 export default FilterAuthor
