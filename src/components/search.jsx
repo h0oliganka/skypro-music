@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import React from 'react'
 import FilterAuthor from './filterAuthor'
+import FilterGenre from './filterGenre'
+import FilterYear from './filterYear'
 
 function Search() {
   const [visibleFilter, setVisibleFilter] = useState(null)
@@ -25,12 +27,12 @@ function Search() {
       <h2 className="centerblock__h2">Треки</h2>
       <div className="centerblock__filter filter">
         <div className="filter__title">Искать по:</div>
-        <div className="centerblock__filter_item"></div>
-        <div>
+        <div className="centerblock__filter_item">
           <button
             onClick={() => {
               toggleVisibleFilter('author')
             }}
+            value="author"
             type="button"
             className={
               visibleFilter === 'author'
@@ -40,12 +42,41 @@ function Search() {
           >
             исполнителю
           </button>
-          {visibleFilter === 'author' && <FilterAuthor />}
+          {visibleFilter === 'author' && <div><FilterAuthor /></div>}
+
+          <button
+            onClick={() => {
+              toggleVisibleFilter('year')
+            }}
+            value="year"
+            type="button"
+            className={
+              visibleFilter === 'year'
+                ? 'filter__button button-year _btn-text button__active'
+                : 'filter__button button-year _btn-text'
+            }
+          >
+            году выпуска
+          </button>
+          {visibleFilter === 'year' && <div><FilterYear /></div>}
+
+          <button
+            onClick={() => {
+              toggleVisibleFilter('genre')
+            }}
+            value="genre"
+            type="button"
+            className={
+              visibleFilter === 'genre'
+                ? 'filter__button button-genre _btn-text button__active'
+                : 'filter__button button-genre _btn-text'
+            }
+          >
+            жанру
+          </button>
+          {visibleFilter === 'year' && <div><FilterGenre /></div>}
+
         </div>
-        <button className="filter__button button-year _btn-text">
-          году выпуска
-        </button>
-        <button className="filter__button button-genre _btn-text">жанру</button>
       </div>
     </>
   )
