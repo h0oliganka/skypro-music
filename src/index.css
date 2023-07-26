@@ -241,6 +241,22 @@ body {
   line-height: 24px;
   margin-top: 50px;
   animation: ani 0.3s forwards;
+  overflow-y: scroll
+}
+
+::-webkit-scrollbar {
+  height: 5px; /* высота для горизонтального скролла */
+  background-color: #252525;
+  border-radius: 9em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #464646;
+  border-radius: 9em;
+}
+
+.asasasas {
+  position: relative;
 }
 
 .centerblock__content {
