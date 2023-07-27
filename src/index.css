@@ -399,10 +399,6 @@ input[type=range]::-moz-range-thumb {
   color: #fff;
 }
 
-.filter__button:not(:last-child) {
-  margin-right: 10px;
-}
-
 .button__active {
   border-color: #ad61ff;
   color: #ad61ff;
