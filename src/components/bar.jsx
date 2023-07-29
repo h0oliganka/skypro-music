@@ -1,6 +1,6 @@
 import React from "react";
 
-function Bar() {
+export function Bar() {
   return (
   <div className="bar">
     <div className="bar__content">
@@ -89,5 +89,3 @@ function Bar() {
   </div>
   )
 }
-
-export default Bar;

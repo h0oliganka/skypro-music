@@ -1,4 +1,4 @@
-function FilterAuthor() {
+export function FilterAuthor() {
   return <div className="centerblock__filter_item_text">
     <a className="filtersButton" href="">Michael Jackson</a>
     <a className="filtersButton" href="">Nero</a>
@@ -12,5 +12,3 @@ function FilterAuthor() {
     <a className="filtersButton" href="">HYBIT, Mr. Black, Offer Nissim, Hi Profile</a>
   </div>
 }
-
-export default FilterAuthor

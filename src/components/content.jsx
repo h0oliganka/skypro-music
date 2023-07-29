@@ -1,7 +1,7 @@
 import React from 'react'
-import Playlist from './playlist'
+import { Playlist } from './playlist'
 
-function Content({ loading }) {
+export function Content({ loading }) {
   return (
     <div className="centerblock__content">
       <div className="centerblock__content">
@@ -20,5 +20,3 @@ function Content({ loading }) {
     </div>
   )
 }
-
-export default Content

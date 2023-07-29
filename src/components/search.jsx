@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import React from 'react'
-import FilterAuthor from './filterAuthor'
-import FilterGenre from './filterGenre'
-import FilterYear from './filterYear'
+import { FilterAuthor } from './filterAuthor'
+import { FilterGenre } from './filterGenre'
+import { FilterYear } from './filterYear'
 
-function Search() {
+export function Search() {
   const [visibleFilter, setVisibleFilter] = useState(null)
 
   const toggleVisibleFilter = (filter) => {
@@ -87,5 +87,3 @@ function Search() {
     </>
   )
 }
-
-export default Search

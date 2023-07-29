@@ -1,9 +1,9 @@
 import React from 'react'
-import Bar from './bar'
-import Content from './content'
-import Nav from './nav'
-import Search from './search'
-import Sidebar from './sidebar'
+import { Bar } from './bar'
+import { Content } from './content'
+import { Nav } from './nav'
+import { Search } from './search'
+import { Sidebar } from './sidebar'
 
 function Main({ loading }) {
   return (

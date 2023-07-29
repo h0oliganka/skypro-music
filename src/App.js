@@ -1,7 +1,7 @@
 import Main from './components/main'
 import { useEffect, useState } from 'react'
 
-function App() {
+export function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -10,5 +10,3 @@ function App() {
 
   return <Main loading={loading} />
 }
-
-export default App

@@ -1,7 +1,7 @@
 import Skeleton from '../skelet/skelet'
 import React from 'react'
 
-function Sidebar({ loading }) {
+export function Sidebar({ loading }) {
   return (
     <div>
       {loading ? (
@@ -72,4 +72,3 @@ function Sidebar({ loading }) {
     </div>
   )
 }
-export default Sidebar

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import React from 'react'
 
-function Nav() {
+export function Nav() {
   const [visible, setVisible] = useState(true)
   const toggleVisibility = () => setVisible(!visible)
 
@@ -50,5 +50,3 @@ function Nav() {
     </nav>
   )
 }
-
-export default Nav

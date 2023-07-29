@@ -1,7 +1,7 @@
 import React from 'react'
 import Skeleton from '../skelet/skelet'
 
-function Playlist({ loading }) {
+export function Playlist({ loading }) {
   return (
     <div className="content__playlist playlist">
       {loading ? (
@@ -565,5 +565,3 @@ function Playlist({ loading }) {
     </div>
   )
 }
-
-export default Playlist

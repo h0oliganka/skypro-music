@@ -1,4 +1,4 @@
-function FilterYear() {
+export function FilterYear() {
   return <div className="centerblock__filter_item_text">
     <a className="filtersButton" href="">1987</a>
     <a className="filtersButton" href="">1990</a>
@@ -14,5 +14,3 @@ function FilterYear() {
     <a className="filtersButton" href="">2022</a>
   </div>
 }
-
-export default FilterYear

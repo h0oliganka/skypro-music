@@ -1,4 +1,4 @@
-function FilterGenre() {
+export function FilterGenre() {
     return <div className="centerblock__filter_item_text">
         <a className="filtersButton" href="">Pop</a>
         <a className="filtersButton" href="">Hip-Hop</a>
@@ -8,5 +8,3 @@ function FilterGenre() {
         <a className="filtersButton" href="">Blues</a>
     </div>
 }
-
-export default FilterGenre
