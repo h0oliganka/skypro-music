@@ -4,22 +4,23 @@ import { Content } from '../contentFolder/content'
 import { Nav } from '../navFolder/nav'
 import { Search } from '../searchFolder/search'
 import { Sidebar } from '../sidebarFolder/sidebar'
+import * as S from './main.styled'
 
 export function Main({ loading }) {
   return (
-    <div className="wrapper">
-      <div className="container">
-        <main className="main">
+    <S.Wrapper>
+      <S.Container>
+        <S.Main>
           <Nav />
-          <div className="main__centerblock centerblock">
+          <S.MainCenterblock>
             <Search />
             <Content loading={loading} />
-          </div>
+          </S.MainCenterblock>
           <Sidebar loading={loading} />
-        </main>
+        </S.Main>
         <Bar />
-        <footer className="footer"></footer>
-      </div>
-    </div>
+        <footer></footer>
+      </S.Container>
+    </S.Wrapper>
   )
 }

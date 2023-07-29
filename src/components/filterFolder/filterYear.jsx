@@ -1,16 +1,20 @@
+import * as S from './filter.styled'
+
 export function FilterYear() {
-  return <div className="centerblock__filter_item_text">
-    <a className="filtersButton" href="">1987</a>
-    <a className="filtersButton" href="">1990</a>
-    <a className="filtersButton" href="">1995</a>
-    <a className="filtersButton" href="">2001</a>
-    <a className="filtersButton" href="">2005</a>
-    <a className="filtersButton" href="">2006</a>
-    <a className="filtersButton" href="">2008</a>
-    <a className="filtersButton" href="">2010</a>
-    <a className="filtersButton" href="">2011</a>
-    <a className="filtersButton" href="">2012</a>
-    <a className="filtersButton" href="">2015</a>
-    <a className="filtersButton" href="">2022</a>
-  </div>
+  return (
+    <S.CenterBlockFilterItemText className="centerblock__filter_item_text">
+      <S.FiltersButton href="">1987</S.FiltersButton>
+      <S.FiltersButton href="">1990</S.FiltersButton>
+      <S.FiltersButton href="">1995</S.FiltersButton>
+      <S.FiltersButton href="">2001</S.FiltersButton>
+      <S.FiltersButton href="">2005</S.FiltersButton>
+      <S.FiltersButton href="">2006</S.FiltersButton>
+      <S.FiltersButton href="">2008</S.FiltersButton>
+      <S.FiltersButton href="">2010</S.FiltersButton>
+      <S.FiltersButton href="">2011</S.FiltersButton>
+      <S.FiltersButton href="">2012</S.FiltersButton>
+      <S.FiltersButton href="">2015</S.FiltersButton>
+      <S.FiltersButton href="">2022</S.FiltersButton>
+    </S.CenterBlockFilterItemText>
+  )
 }

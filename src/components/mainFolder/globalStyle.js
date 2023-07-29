@@ -49,19 +49,40 @@ export const GlobalStyle = createGlobalStyle`
     color: #ffffff;
   }
   
-  .wrapper {
-    width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-    background-color: #383838;
+  input[type="range"] {
+    accent-color: #fff;
   }
   
-  .container {
-    max-width: 1920px;
-    height: 100vh;
-    margin: 0 auto;
-    position: relative;
-    background-color: #181818;
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 3px;
+    background-color: #fff;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    cursor: pointer;
+    margin-top: -6px;
+  }
+  
+  input[type=range]::-moz-range-track {
+    height: 5px;
+    background-color: #fff;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    color: white;
+    background: #ecf0f1;
+    cursor: pointer;
+  }
+  
+  ::-webkit-scrollbar {
+    height: 5px; /* высота для горизонтального скролла */
+    background-color: #252525;
+    border-radius: 9em;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #464646;
+    border-radius: 9em;
   }
   
   ._btn-text:hover {

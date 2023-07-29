@@ -1,10 +1,14 @@
+import * as S from './filter.styled'
+
 export function FilterGenre() {
-    return <div className="centerblock__filter_item_text">
-        <a className="filtersButton" href="">Pop</a>
-        <a className="filtersButton" href="">Hip-Hop</a>
-        <a className="filtersButton" href="">Rock</a>
-        <a className="filtersButton" href="">Classic</a>
-        <a className="filtersButton" href="">Metal</a>
-        <a className="filtersButton" href="">Blues</a>
-    </div>
+  return (
+    <S.CenterBlockFilterItemText>
+      <S.FiltersButton href="">Pop</S.FiltersButton>
+      <S.FiltersButton href="">Hip-Hop</S.FiltersButton>
+      <S.FiltersButton href="">Rock</S.FiltersButton>
+      <S.FiltersButton href="">Classic</S.FiltersButton>
+      <S.FiltersButton href="">Metal</S.FiltersButton>
+      <S.FiltersButton href="">Blues</S.FiltersButton>
+    </S.CenterBlockFilterItemText>
+  )
 }

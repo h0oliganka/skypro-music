@@ -1,22 +1,21 @@
 import React from 'react'
 import { Playlist } from '../playlistFolder/playlist'
+import * as S from './content.styled'
 
 export function Content({ loading }) {
   return (
-    <div className="centerblock__content">
-      <div className="centerblock__content">
-        <div className="content__title playlist-title">
-          <div className="playlist-title__col col01">Трек</div>
-          <div className="playlist-title__col col02">ИСПОЛНИТЕЛЬ</div>
-          <div className="playlist-title__col col03">АЛЬБОМ</div>
-          <div className="playlist-title__col col04">
-            <svg className="playlist-title__svg" alt="time">
-              <use xlinkHref="img/icon/sprite.svg#icon-watch"></use>
-            </svg>
-          </div>
-        </div>
-      </div>
+    <S.CenterBlockContent>
+      <S.ContentTitle>
+        <S.PlaylistTitlecol01>Трек</S.PlaylistTitlecol01>
+        <S.PlaylistTitlecol02>ИСПОЛНИТЕЛЬ</S.PlaylistTitlecol02>
+        <S.PlaylistTitlecol03>АЛЬБОМ</S.PlaylistTitlecol03>
+        <S.PlaylistTitlecol04>
+          <S.PlaylistTitleSvg alt="time">
+            <use xlinkHref="img/icon/sprite.svg#icon-watch"></use>
+          </S.PlaylistTitleSvg>
+        </S.PlaylistTitlecol04>
+      </S.ContentTitle>
       <Playlist loading={loading} />
-    </div>
+    </S.CenterBlockContent>
   )
 }
