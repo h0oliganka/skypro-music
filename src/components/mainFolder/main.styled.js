@@ -36,5 +36,3 @@ export const MainCenterblock = styled.div`
   flex-grow: 3;
   padding: 20px 40px 20px 111px;
 `
-
-// export const  = styled.div``

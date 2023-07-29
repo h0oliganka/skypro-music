@@ -90,6 +90,12 @@ export const GlobalStyle = createGlobalStyle`
     color: #d9b6ff;
     cursor: pointer;
   }
+
+  ._btn-active {
+    border-color: #ad61ff;
+    color: #ad61ff;
+    cursor: pointer;
+  }
   
   ._btn-icon:hover svg {
     fill: transparent;

@@ -3,6 +3,7 @@ import React from 'react'
 import { FilterAuthor } from '../filterFolder/filterAuthor'
 import { FilterGenre } from '../filterFolder/filterGenre'
 import { FilterYear } from '../filterFolder/filterYear'
+import * as S from './search.styled'
 
 export function Search() {
   const [visibleFilter, setVisibleFilter] = useState(null)
@@ -13,24 +14,18 @@ export function Search() {
 
   return (
     <>
-      <div className="centerblock__search search">
-        <svg className="search__svg">
+      <S.CenterblockSearch>
+        <S.SearchSvg>
           <use xlinkHref="img/icon/sprite.svg#icon-search"></use>
-        </svg>
-        <input
-          className="search__text"
-          type="search"
-          placeholder="Поиск"
-          name="search"
-        />
-      </div>
-      <h2 className="centerblock__h2">Треки</h2>
-      <div className="centerblock__filter filter">
-        <div className="filter__title">Искать по:</div>
-        <div className="centerblock__filter_item">
-
-          <div className="centerblock__filter_item">
-            <button
+        </S.SearchSvg>
+        <S.SearchText type="search" placeholder="Поиск" name="search" />
+      </S.CenterblockSearch>
+      <S.Centerblockh2>Треки</S.Centerblockh2>
+      <S.CenterblockFilter>
+        <S.FilterTitle>Искать по:</S.FilterTitle>
+        <S.CenterblockFilterItem>
+          <S.CenterblockFilterItem>
+            <S.FilterButton
               onClick={() => {
                 toggleVisibleFilter('author')
               }}
@@ -38,35 +33,33 @@ export function Search() {
               type="button"
               className={
                 visibleFilter === 'author'
-                  ? 'filter__button button-author _btn-text button__active'
-                  : 'filter__button button-author _btn-text'
+                  ? '_btn-text _btn-active'
+                  : '_btn-text'
               }
             >
               исполнителю
-            </button>
+            </S.FilterButton>
             {visibleFilter === 'author' && <FilterAuthor />}
-          </div>
+          </S.CenterblockFilterItem>
 
-          <div className="centerblock__filter_item">
-            <button
+          <S.CenterblockFilterItem>
+            <S.FilterButton
               onClick={() => {
                 toggleVisibleFilter('year')
               }}
               value="year"
               type="button"
               className={
-                visibleFilter === 'year'
-                  ? 'filter__button button-year _btn-text button__active'
-                  : 'filter__button button-year _btn-text'
+                visibleFilter === 'year' ? '_btn-text _btn-active' : '_btn-text'
               }
             >
               году выпуска
-            </button>
+            </S.FilterButton>
             {visibleFilter === 'year' && <FilterYear />}
-          </div>
+          </S.CenterblockFilterItem>
 
-          <div className="centerblock__filter_item">
-            <button
+          <S.CenterblockFilterItem>
+            <S.FilterButton
               onClick={() => {
                 toggleVisibleFilter('genre')
               }}
@@ -74,16 +67,16 @@ export function Search() {
               type="button"
               className={
                 visibleFilter === 'genre'
-                  ? 'filter__button button-genre _btn-text button__active'
-                  : 'filter__button button-genre _btn-text'
+                  ? '_btn-text _btn-active'
+                  : '_btn-text'
               }
             >
               жанру
-            </button>
+            </S.FilterButton>
             {visibleFilter === 'genre' && <FilterGenre />}
-          </div>
-        </div>
-      </div>
+          </S.CenterblockFilterItem>
+        </S.CenterblockFilterItem>
+      </S.CenterblockFilter>
     </>
   )
 }
