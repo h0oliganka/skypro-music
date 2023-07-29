@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import React from 'react'
-import { FilterAuthor } from './filterAuthor'
-import { FilterGenre } from './filterGenre'
-import { FilterYear } from './filterYear'
+import { FilterAuthor } from '../filterFolder/filterAuthor'
+import { FilterGenre } from '../filterFolder/filterGenre'
+import { FilterYear } from '../filterFolder/filterYear'
 
 export function Search() {
   const [visibleFilter, setVisibleFilter] = useState(null)

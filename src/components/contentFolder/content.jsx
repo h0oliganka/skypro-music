@@ -1,5 +1,5 @@
 import React from 'react'
-import { Playlist } from './playlist'
+import { Playlist } from '../playlistFolder/playlist'
 
 export function Content({ loading }) {
   return (

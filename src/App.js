@@ -1,4 +1,4 @@
-import Main from './components/main'
+import { Main } from './components/mainFolder/main'
 import { useEffect, useState } from 'react'
 
 export function App() {

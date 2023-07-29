@@ -1,11 +1,11 @@
 import React from 'react'
-import { Bar } from './bar'
-import { Content } from './content'
-import { Nav } from './nav'
-import { Search } from './search'
-import { Sidebar } from './sidebar'
+import { Bar } from '../barFolder/bar'
+import { Content } from '../contentFolder/content'
+import { Nav } from '../navFolder/nav'
+import { Search } from '../searchFolder/search'
+import { Sidebar } from '../sidebarFolder/sidebar'
 
-function Main({ loading }) {
+export function Main({ loading }) {
   return (
     <div className="wrapper">
       <div className="container">
@@ -23,5 +23,3 @@ function Main({ loading }) {
     </div>
   )
 }
-
-export default Main
