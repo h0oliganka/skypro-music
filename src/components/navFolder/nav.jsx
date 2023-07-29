@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import React from 'react'
-import * as S from "./nav.styled"
-
-// const Styled = styled.div``
+import * as S from './nav.styled'
 
 export function Nav() {
   const [visible, setVisible] = useState(true)
