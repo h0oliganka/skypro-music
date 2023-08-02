@@ -13,8 +13,9 @@ export function App() {
   return (
     <>
       <GlobalStyle />
-      <AppRoutes />
+      <AppRoutes>
       <Main loading={loading} />
+      </AppRoutes>
     </>
   )
 }

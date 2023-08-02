@@ -14,21 +14,10 @@ export const CenterBlock = styled.div`
 
 export const CenterBlockItem = styled.div`
   padding: 40px 40px 40px 40px;
-  display: grid;
 `
 
 export const LogoImage = styled.img`
   width: 113.33px;
   height: 17px;
   color: black;
-  margin-bottom: 45px;
 `
-
-export const InputItem = styled.input`
-  outline: none;
-  border: 0;
-  margin-bottom: 25px;
-  border-bottom: 1px solid #000;
-`
-
-// outline: none;

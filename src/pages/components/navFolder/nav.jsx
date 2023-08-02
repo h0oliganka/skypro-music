@@ -30,13 +30,13 @@ export function Nav() {
         <S.NavMenu>
           <S.MenuList>
             <S.MenuItem>
-              <S.MenuLink to="/">Главное</S.MenuLink>
+              <S.MenuLink to="/main">Главное</S.MenuLink>
             </S.MenuItem>
             <S.MenuItem>
-              <S.MenuLink to="/">Мой плейлист</S.MenuLink>
+              <S.MenuLink to="/my_playlist">Мой плейлист</S.MenuLink>
             </S.MenuItem>
             <S.MenuItem>
-              <S.MenuLink to="/login">Войти</S.MenuLink>
+              <S.MenuLink to="/login_user">Войти</S.MenuLink>
             </S.MenuItem>
           </S.MenuList>
         </S.NavMenu>
