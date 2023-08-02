@@ -1,9 +1,9 @@
 import React from 'react'
-import { Bar } from '../barFolder/bar'
-import { Content } from '../contentFolder/content'
-import { Nav } from '../navFolder/nav'
-import { Search } from '../searchFolder/search'
-import { Sidebar } from '../sidebarFolder/sidebar'
+import { Bar } from '../components/barFolder/bar'
+import { Content } from '../components/contentFolder/content'
+import { Nav } from '../components/navFolder/nav'
+import { Search } from '../components/searchFolder/search'
+import { Sidebar } from '../components/sidebarFolder/sidebar'
 import * as S from './main.styled'
 
 export function Main({ loading }) {

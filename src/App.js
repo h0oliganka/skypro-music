@@ -1,6 +1,7 @@
-import { Main } from './components/mainFolder/main'
+import { Main } from './pages/mainFolder/main'
 import { useEffect, useState } from 'react'
-import { GlobalStyle } from './components/mainFolder/globalStyle'
+import { GlobalStyle } from './pages/mainFolder/globalStyle'
+import { AppRoutes } from './routes'
 
 export function App() {
   const [loading, setLoading] = useState(true)
@@ -10,9 +11,10 @@ export function App() {
   })
 
   return (
-  <>
-  <GlobalStyle />
-  <Main loading={loading} />
-  </>
+    <>
+      <GlobalStyle />
+      <AppRoutes />
+      <Main loading={loading} />
+    </>
   )
 }
