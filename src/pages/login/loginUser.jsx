@@ -16,7 +16,7 @@ export const Login = () => {
               <L.InputItem type="password" placeholder="Пароль" />
             </L.InputBlock>
             <L.ButtonBlock>
-              <L.ButtonEnter to="/main">Войти</L.ButtonEnter>
+              <L.ButtonEnter to="/">Войти</L.ButtonEnter>
 
               <L.ButtonRegister to="/register_user">
                 Зарегистрироваться

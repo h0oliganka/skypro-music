@@ -21,7 +21,7 @@ export const RegisterUser = () => {
               />
             </R.InputBlock>
             <div>
-              <R.ButtonRegister to="/main">Зарегистрироваться</R.ButtonRegister>
+              <R.ButtonRegister to="/">Зарегистрироваться</R.ButtonRegister>
             </div>
           </R.CenterBlockItem>
         </R.CenterBlock>

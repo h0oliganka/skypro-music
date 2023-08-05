@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 export const CenterBlockFilterItemText = styled.div`
   position: absolute;
@@ -20,7 +21,7 @@ export const CenterBlockFilterItemText = styled.div`
   overflow-y: scroll;
 `
 
-export const FiltersButton = styled.a`
+export const FiltersButton = styled(NavLink)`
   background-color: rgba(28, 28, 28, 0);
   color: #fff;
   outline: none;

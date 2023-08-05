@@ -6,7 +6,7 @@ import { Main } from './pages/mainFolder/main'
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/main" element={<Main />} />
+      <Route path="/" element={<Main />} />
       <Route path="/login_user" element={<Login />} />
       <Route path="/register_user" element={<RegisterUser />} />
     </Routes>
