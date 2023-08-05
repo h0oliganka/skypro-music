@@ -7,23 +7,21 @@ export const Login = () => {
       <S.Container>
         <L.CenterBlock>
           <L.CenterBlockItem>
-            <div>
-              <L.LogoImage src="../img/logoBlack.png" alt="logo" />
-            </div>
-            <div>
+            <L.LogoImage>
+              <L.LogoImageItem src="../img/logoBlack" alt="logo" />
+            </L.LogoImage>
+            <L.InputBlock>
               <L.InputItem type="text" placeholder="Почта" />
-            </div>
-            <div>
+
               <L.InputItem type="password" placeholder="Пароль" />
-            </div>
-            <div>
+            </L.InputBlock>
+            <L.ButtonBlock>
               <L.ButtonEnter to="/main">Войти</L.ButtonEnter>
-            </div>
-            <div>
+
               <L.ButtonRegister to="/register_user">
                 Зарегистрироваться
               </L.ButtonRegister>
-            </div>
+            </L.ButtonBlock>
           </L.CenterBlockItem>
         </L.CenterBlock>
       </S.Container>

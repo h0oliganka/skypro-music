@@ -7,18 +7,19 @@ export const RegisterUser = () => {
       <S.Container>
         <R.CenterBlock>
           <R.CenterBlockItem>
-            <div>
-              <R.LogoImage src="../img/logoBlack" alt="logo" />
-            </div>
-            <div>
-              <R.InputItem type="text" placeholder="Почта" />
-            </div>
-            <div>
-              <R.InputItem type="password" placeholder="Пароль" />
-            </div>
-            <div>
-              <R.InputItem type="password" placeholder="Повторите пароль" />
-            </div>
+            <R.LogoImage>
+              <R.LogoImageItem src="../img/logoBlack" alt="logo" />
+            </R.LogoImage>
+            <R.InputBlock>
+              <R.InputBlockItem type="text" placeholder="Почта" />
+
+              <R.InputBlockItem type="password" placeholder="Пароль" />
+
+              <R.InputBlockItem
+                type="password"
+                placeholder="Повторите пароль"
+              />
+            </R.InputBlock>
             <div>
               <R.ButtonRegister to="/main">Зарегистрироваться</R.ButtonRegister>
             </div>

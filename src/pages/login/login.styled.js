@@ -18,7 +18,7 @@ export const CenterBlockItem = styled.div`
   display: grid;
 `
 
-export const LogoImage = styled.img`
+export const LogoImageItem = styled.img`
   width: 140.001px;
   height: 21px;
   color: black;
@@ -92,3 +92,14 @@ export const ButtonRegister = styled(NavLink)`
     background: #d9d9d9;
   }
 `
+
+export const LogoImage = styled.div`
+  height: 106px;
+`
+
+export const InputBlock = styled.div`
+  gap: 46px;
+  display: grid;
+`
+
+export const ButtonBlock = styled.div``
