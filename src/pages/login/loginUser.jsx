@@ -8,7 +8,7 @@ export const Login = () => {
         <L.CenterBlock>
           <L.CenterBlockItem>
             <L.LogoImage>
-              <L.LogoImageItem src="../img/logoBlack.png" alt="logo" />
+              <L.LogoImageItem src="/img/logoBlack.png" alt="logo" />
             </L.LogoImage>
             <L.InputBlock>
               <L.InputItem type="text" placeholder="Почта" />
@@ -18,7 +18,7 @@ export const Login = () => {
             <L.ButtonBlock>
               <L.ButtonEnter to="/">Войти</L.ButtonEnter>
 
-              <L.ButtonRegister to="/register_user">
+              <L.ButtonRegister to="/register">
                 Зарегистрироваться
               </L.ButtonRegister>
             </L.ButtonBlock>

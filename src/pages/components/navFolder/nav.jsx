@@ -36,7 +36,7 @@ export function Nav() {
               <S.MenuLink to="/my_playlist">Мой плейлист</S.MenuLink>
             </S.MenuItem>
             <S.MenuItem>
-              <S.MenuLink to="/login_user">Войти</S.MenuLink>
+              <S.MenuLink to="/login">Войти</S.MenuLink>
             </S.MenuItem>
           </S.MenuList>
         </S.NavMenu>
