@@ -22,6 +22,7 @@ export const SearchSvg = styled.svg`
   margin-right: 5px;
   stroke: #ffffff;
   fill: transparent;
+  cursor: pointer;
 `
 
 export const SearchText = styled.input`
