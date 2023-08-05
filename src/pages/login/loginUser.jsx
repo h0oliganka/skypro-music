@@ -8,7 +8,7 @@ export const Login = () => {
         <L.CenterBlock>
           <L.CenterBlockItem>
             <L.LogoImage>
-              <L.LogoImageItem src="../img/logoBlack" alt="logo" />
+              <L.LogoImageItem src="../img/logoBlack.png" alt="logo" />
             </L.LogoImage>
             <L.InputBlock>
               <L.InputItem type="text" placeholder="Почта" />

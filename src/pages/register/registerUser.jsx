@@ -8,7 +8,7 @@ export const RegisterUser = () => {
         <R.CenterBlock>
           <R.CenterBlockItem>
             <R.LogoImage>
-              <R.LogoImageItem src="../img/logoBlack" alt="logo" />
+              <R.LogoImageItem src="../img/logoBlack.png" alt="logo" />
             </R.LogoImage>
             <R.InputBlock>
               <R.InputBlockItem type="text" placeholder="Почта" />
