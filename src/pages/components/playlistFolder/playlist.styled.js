@@ -8,7 +8,6 @@ export const ContentPlaylist = styled.div`
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow-y: scroll;
 `
 
 export const PlaylistItem = styled.div`
@@ -43,7 +42,7 @@ export const TrackTitle = styled.div`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 410px;
+  width: 481px;
 `
 
 export const TrackTitleImg = styled.div`
@@ -87,7 +86,7 @@ export const TrackTitleSpan = styled.span`
 `
 
 export const TrackAuthor = styled.div`
-  width: 305px;
+  width: 321px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,10 +1,11 @@
+import React from 'react'
+import * as M from '../myTracks/myTracks.styled'
 import * as S from '../mainFolder/main.styled'
 import { Nav } from '../components/navFolder/nav'
-import { TrackList } from './trackList'
+import { TrackList } from '../myTracks/trackList'
 import { Bar } from '../components/barFolder/bar'
-import * as M from './myTracks.styled'
 
-export const MyTracks = ({ loading }) => {
+export function IndieCharge({ loading }) {
   return (
     <S.Wrapper>
       <S.Container>
@@ -17,7 +18,7 @@ export const MyTracks = ({ loading }) => {
               </M.SearchSvg>
               <M.SearchText type="search" placeholder="Поиск" name="search" />
             </M.CenterblockSearch>
-            <M.Centerblockh2>Мои треки</M.Centerblockh2>
+            <M.Centerblockh2>Инди заряд</M.Centerblockh2>
             <TrackList loading={loading} />
           </M.MainCenterblock>
           <M.SidebarPersonal>

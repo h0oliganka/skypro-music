@@ -8,8 +8,7 @@ export function Sidebar({ loading }) {
       {loading ? (
         <S.MainSidebar>
           <S.SidebarPersonal>
-            <S.SidebarPersonalName>h0oliganka</S.SidebarPersonalName>
-            <S.SidebarAvatar></S.SidebarAvatar>
+            <S.SidebarAvatar src="/img/outsvg.svg" alt="out" />
           </S.SidebarPersonal>
           <S.SidebarBlock>
             <S.SidebarList>
@@ -34,23 +33,22 @@ export function Sidebar({ loading }) {
       ) : (
         <S.MainSidebar>
           <S.SidebarPersonal>
-            <S.SidebarPersonalName>h0oliganka</S.SidebarPersonalName>
-            <S.SidebarAvatar></S.SidebarAvatar>
+            <S.SidebarAvatar src="/img/outsvg.svg" alt="out" />
           </S.SidebarPersonal>
           <S.SidebarBlock>
             <S.SidebarList>
               <S.SidebarItem>
-                <S.SidebarLink href="/#">
+                <S.SidebarLink to="/playlistOfTheDay">
                   <S.SidebarImg src="img/playlist01.png" alt="day's playlist" />
                 </S.SidebarLink>
               </S.SidebarItem>
               <S.SidebarItem>
-                <S.SidebarLink href="/#">
+                <S.SidebarLink to="/danceHits">
                   <S.SidebarImg src="img/playlist02.png" alt="day's playlist" />
                 </S.SidebarLink>
               </S.SidebarItem>
               <S.SidebarItem>
-                <S.SidebarLink href="/#">
+                <S.SidebarLink to="/indieCharge">
                   <S.SidebarImg src="img/playlist03.png" alt="day's playlist" />
                 </S.SidebarLink>
               </S.SidebarItem>

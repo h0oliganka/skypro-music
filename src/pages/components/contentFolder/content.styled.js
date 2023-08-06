@@ -8,7 +8,7 @@ export const CenterBlockContent = styled.div`
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 1000px;
+  width: 1136px;
 `
 
 export const ContentTitle = styled.div`
@@ -24,7 +24,6 @@ export const ContentTitle = styled.div`
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
   margin-bottom: 24px;
 `
 
@@ -36,7 +35,7 @@ export const PlaylistTitlecol01 = styled.div`
   letter-spacing: 2px;
   color: #696969;
   text-transform: uppercase;
-  width: 447px;
+  width: 481px;
 `
 
 export const PlaylistTitlecol02 = styled.div`
@@ -58,7 +57,7 @@ export const PlaylistTitlecol03 = styled.div`
   letter-spacing: 2px;
   color: #696969;
   text-transform: uppercase;
-  width: 245px;
+  width: 293px;
 `
 
 export const PlaylistTitlecol04 = styled.div`
@@ -69,8 +68,9 @@ export const PlaylistTitlecol04 = styled.div`
   letter-spacing: 2px;
   color: #696969;
   text-transform: uppercase;
-  width: 60px;
+  width: 12px;
   text-align: end;
+  margin-left: 25px;
 `
 
 export const PlaylistTitleSvg = styled.svg`

@@ -1,7 +1,8 @@
 import { styled } from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 export const MainSidebar = styled.div`
-  max-width: 418px;
+  max-width: 501px;
   padding: 20px 90px 20px 78px;
 `
 
@@ -31,11 +32,12 @@ export const SidebarPersonalName = styled.p`
   margin-right: 16px;
 `
 
-export const SidebarAvatar = styled.div`
+export const SidebarAvatar = styled.img`
   width: 43px;
   height: 43px;
   background-color: #313131;
   border-radius: 50%;
+  cursor: pointer;
 `
 
 export const SidebarBlock = styled.div`
@@ -73,7 +75,7 @@ export const SidebarItem = styled.div`
     margin-bottom: 30px;
 `
 
-export const SidebarLink = styled.div`
+export const SidebarLink = styled(NavLink)`
   width: 100%;
   height: 100%;
 `

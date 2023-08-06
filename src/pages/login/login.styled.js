@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 export const CenterBlock = styled.div`
   width: 366px;
-  height: 439px;
+  height: 415px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -14,9 +14,7 @@ export const CenterBlock = styled.div`
   display: inline-flex;
 `
 
-export const CenterBlockItem = styled.div`
-  display: grid;
-`
+export const CenterBlockItem = styled.div``
 
 export const LogoImageItem = styled.img`
   width: 140.001px;
@@ -31,6 +29,7 @@ export const InputItem = styled.input`
   border: 0;
   margin: 0px 47px 0px 41px;
   border-bottom: 1px solid #d0cece;
+  height: 24px;
   &::placeholder {
     color: #d0cece;
     font-variant-numeric: lining-nums proportional-nums;
@@ -73,7 +72,7 @@ export const ButtonRegister = styled(NavLink)`
   align-items: center;
   width: 278px;
   height: 52px;
-  margin: 0px 47px 0px 41px;
+  margin: 0px 47px 39px 41px;
   border-radius: 6px;
   border: 1px solid #d0cece;
   background: #fff;
@@ -98,8 +97,8 @@ export const LogoImage = styled.div`
 `
 
 export const InputBlock = styled.div`
-  gap: 46px;
   display: grid;
+  gap: 38px;
 `
 
 export const ButtonBlock = styled.div``
