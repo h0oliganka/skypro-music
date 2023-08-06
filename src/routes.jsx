@@ -4,22 +4,25 @@ import { RegisterUser } from './pages/register/registerUser'
 import { Main } from './pages/mainFolder/main'
 import { MyTracks } from './pages/myTracks/myTracks'
 import { PlaylistOfTheDay } from './pages/compilations/playlistOfTheDay'
-import { DanceHits } from './pages/compilations/100DanceHits'
+import { DanceHits } from './pages/compilations/DanceHits'
 import { IndieCharge } from './pages/compilations/indieCharge'
+import { ProtectedRoute } from './pages/protected/protected'
+import { NotFound } from './pages/404/NotFound'
 
-export const AppRoutes = ({ loading }) => {
+export const AppRoutes = ({ user }) => {
   return (
     <Routes>
-      <Route path="/" element={<Main loading={loading} />} />
+      <Route element={<ProtectedRoute isAllowed={Boolean(user)} />}>
+        <Route path="/favorites" element={<MyTracks />} />
+        <Route path="/category/1" element={<PlaylistOfTheDay />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/category/2" element={<DanceHits />} />
+        <Route path="//category/3" element={<IndieCharge />} />
+      </Route>
+
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<RegisterUser />} />
-      <Route path="/my_playlist" element={<MyTracks loading={loading} />} />
-      <Route
-        path="/playlistOfTheDay"
-        element={<PlaylistOfTheDay loading={loading} />}
-      />
-      <Route path="/danceHits" element={<DanceHits loading={loading} />} />
-      <Route path="/indieCharge" element={<IndieCharge loading={loading} />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }

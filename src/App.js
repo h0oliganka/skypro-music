@@ -4,6 +4,12 @@ import { GlobalStyle } from './pages/mainFolder/globalStyle'
 import { AppRoutes } from './routes'
 
 export function App() {
+  const [user, setUser] = useState(null)
+
+  const handleLogin = () => setUser({ login: 'hello', password: 'hello' })
+
+  const handleLogout = () => setUser(null)
+
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -13,8 +19,12 @@ export function App() {
   return (
     <>
       <GlobalStyle />
-      <AppRoutes loading={loading}>
-        <Main loading={loading} />
+      <AppRoutes user={user} loading={loading}>
+        <Main
+          loading={loading}
+          user={user}
+          onAuthButtonClick={user ? handleLogout : handleLogin}
+        />
       </AppRoutes>
     </>
   )
