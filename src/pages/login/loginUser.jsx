@@ -21,7 +21,7 @@ export const Login = ({ user, onAuthButtonClick }) => {
               <L.ButtonEnter
                 to="/"
                 className={({ isActive }) =>
-                  cn('App-link', {
+                  cn(<S.Wrapper/>, {
                     [activeClassName]: isActive,
                   })
                 }

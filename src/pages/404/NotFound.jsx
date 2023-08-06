@@ -5,7 +5,7 @@ import { Nav } from '../components/navFolder/nav'
 import { Bar } from '../components/barFolder/bar'
 import * as N from './notFound.styled'
 
-export function NotFound({ loading }) {
+export function NotFound() {
   return (
     <S.Wrapper>
       <S.Container>
