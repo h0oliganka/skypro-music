@@ -8,6 +8,7 @@
     "prettier",
     "plugin:react/jsx-runtime"
   ],
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -15,10 +16,22 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": [
+    "react"
+  ],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
     "react/prop-types": 0,
-    "react/destructuring-assignment": [0]
+    "react/destructuring-assignment": [
+      0
+    ]
   }
 }
