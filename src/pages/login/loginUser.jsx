@@ -1,8 +1,14 @@
 import * as S from '../mainFolder/main.styled'
 import * as L from './login.styled'
+import { useNavigate } from 'react-router-dom';
 
-export const Login = ({ user, onAuthButtonClick }) => {
-  const activeClassName = 'underline'
+export const Login = () => {
+
+  const navigate = useNavigate();
+  const addToken = () => {
+    localStorage.setItem('Token', 'lfd123mkw1ewqsakl');
+    navigate('/');
+  };
 
   return (
     <S.Wrapper>
@@ -20,11 +26,7 @@ export const Login = ({ user, onAuthButtonClick }) => {
             <L.ButtonBlock>
               <L.ButtonEnter
                 to="/"
-                className={({ isActive }) =>
-                  cn(<S.Wrapper/>, {
-                    [activeClassName]: isActive,
-                  })
-                }
+                onClick={addToken}
               >
                 Войти
               </L.ButtonEnter>

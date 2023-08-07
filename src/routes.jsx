@@ -12,7 +12,7 @@ import { NotFound } from './pages/404/NotFound'
 export const AppRoutes = ({ user }) => {
   return (
     <Routes>
-      <Route element={<ProtectedRoute isAllowed={Boolean(user)} />}>
+      <Route element={<ProtectedRoute isAllowed={Boolean(localStorage.getItem('Token'))} />}>
         <Route path="/favorites" element={<MyTracks />} />
         <Route path="/category/1" element={<PlaylistOfTheDay />} />
         <Route path="/" element={<Main />} />
