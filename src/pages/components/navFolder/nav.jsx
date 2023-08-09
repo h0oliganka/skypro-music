@@ -15,7 +15,7 @@ export function Nav() {
   return (
     <S.MainNav>
       <S.NavLogo>
-        <S.LogoImage src="img/logo.png" alt="logo" />
+        <S.LogoImage src="/img/logo.png" alt="logo" />
       </S.NavLogo>
       <S.NavBurger
         tabIndex={0}

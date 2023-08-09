@@ -11,7 +11,7 @@ export function Content({ loading }) {
         <S.PlaylistTitlecol03>АЛЬБОМ</S.PlaylistTitlecol03>
         <S.PlaylistTitlecol04>
           <S.PlaylistTitleSvg alt="time">
-            <use xlinkHref="img/icon/sprite.svg#icon-watch"></use>
+            <use xlinkHref="/img/icon/sprite.svg#icon-watch"></use>
           </S.PlaylistTitleSvg>
         </S.PlaylistTitlecol04>
       </S.ContentTitle>

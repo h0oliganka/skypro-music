@@ -11,27 +11,27 @@ export function Bar() {
             <S.PlayerControls>
               <S.PlayerBtnPrev>
                 <S.PlayerBtnPrevSvg alt="prev">
-                  <use xlinkHref="img/icon/sprite.svg#icon-prev"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-prev"></use>
                 </S.PlayerBtnPrevSvg>
               </S.PlayerBtnPrev>
               <S.PlayerBtnPlay>
                 <S.PlayerBtnPlaySvg className="_btn" alt="play">
-                  <use xlinkHref="img/icon/sprite.svg#icon-play"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-play"></use>
                 </S.PlayerBtnPlaySvg>
               </S.PlayerBtnPlay>
               <S.BtnNext>
                 <S.PlayerBtnNextSvg alt="next">
-                  <use xlinkHref="img/icon/sprite.svg#icon-next"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-next"></use>
                 </S.PlayerBtnNextSvg>
               </S.BtnNext>
               <S.PlayerBtnRepeat className="_btn-icon">
                 <S.BtnRepeatSvg alt="repeat">
-                  <use xlinkHref="img/icon/sprite.svg#icon-repeat"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-repeat"></use>
                 </S.BtnRepeatSvg>
               </S.PlayerBtnRepeat>
               <S.PlayerBtnShuffle className="_btn-icon">
                 <S.PlayerBtnShuffleSvg alt="shuffle">
-                  <use xlinkHref="img/icon/sprite.svg#icon-shuffle"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-shuffle"></use>
                 </S.PlayerBtnShuffleSvg>
               </S.PlayerBtnShuffle>
             </S.PlayerControls>
@@ -40,7 +40,7 @@ export function Bar() {
               <S.TrackPlayContain>
                 <S.TrackPlayImage>
                   <S.TrackPlaySvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackPlaySvg>
                 </S.TrackPlayImage>
                 <S.TrackPlayAuthor>
@@ -58,12 +58,12 @@ export function Bar() {
               <S.TrackPlayLikeDis>
                 <S.TrackPlayLike className="_btn-icon">
                   <S.TrackPlayLikeSvg alt="like">
-                    <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                   </S.TrackPlayLikeSvg>
                 </S.TrackPlayLike>
                 <S.TrackPlayDislike className="_btn-icon">
                   <S.TrackPlayDislikeSvg alt="dislike">
-                    <use xlinkHref="img/icon/sprite.svg#icon-dislike"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-dislike"></use>
                   </S.TrackPlayDislikeSvg>
                 </S.TrackPlayDislike>
               </S.TrackPlayLikeDis>
@@ -73,7 +73,7 @@ export function Bar() {
             <S.VolumeContent>
               <S.VolumeImage>
                 <S.VolumeSvg alt="volume">
-                  <use xlinkHref="img/icon/sprite.svg#icon-volume"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-volume"></use>
                 </S.VolumeSvg>
               </S.VolumeImage>
               <S.VolumeProgress className="_btn">

@@ -14,7 +14,7 @@ export function IndieCharge({ loading }) {
           <M.MainCenterblock>
             <M.CenterblockSearch>
               <M.SearchSvg>
-                <use xlinkHref="img/icon/sprite.svg#icon-search"></use>
+                <use xlinkHref="/img/icon/sprite.svg#icon-search"></use>
               </M.SearchSvg>
               <M.SearchText type="search" placeholder="Поиск" name="search" />
             </M.CenterblockSearch>

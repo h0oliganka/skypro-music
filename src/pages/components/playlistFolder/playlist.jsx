@@ -255,7 +255,7 @@ export function Playlist({ loading }) {
               <S.TrackTitle>
                 <S.TrackTitleImg>
                   <S.TrackTitleSvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackTitleSvg>
                 </S.TrackTitleImg>
                 <>
@@ -273,11 +273,10 @@ export function Playlist({ loading }) {
                 </S.TrackAlbumLink>
               </S.TrackAlbum>
 
-                <S.TrackTimeSvg alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
-                </S.TrackTimeSvg>
-                <S.TrackTimeText>4:44</S.TrackTimeText>
-
+              <S.TrackTimeSvg alt="time">
+                <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
+              </S.TrackTimeSvg>
+              <S.TrackTimeText>4:44</S.TrackTimeText>
             </S.PlaylistTrack>
           </S.PlaylistItem>
 
@@ -286,7 +285,7 @@ export function Playlist({ loading }) {
               <S.TrackTitle>
                 <S.TrackTitleImg>
                   <S.TrackTitleSvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackTitleSvg>
                 </S.TrackTitleImg>
                 <>
@@ -305,7 +304,7 @@ export function Playlist({ loading }) {
               </S.TrackAlbum>
               <>
                 <S.TrackTimeSvg alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                 </S.TrackTimeSvg>
                 <S.TrackTimeText>2:22</S.TrackTimeText>
               </>
@@ -317,7 +316,7 @@ export function Playlist({ loading }) {
               <S.TrackTitle>
                 <S.TrackTitleImg>
                   <S.TrackTitleSvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackTitleSvg>
                 </S.TrackTitleImg>
                 <>
@@ -334,7 +333,7 @@ export function Playlist({ loading }) {
               </S.TrackAlbum>
               <>
                 <S.TrackTimeSvg alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                 </S.TrackTimeSvg>
                 <S.TrackTimeText>2:22</S.TrackTimeText>
               </>
@@ -346,7 +345,7 @@ export function Playlist({ loading }) {
               <S.TrackTitle>
                 <S.TrackTitleImg>
                   <S.TrackTitleSvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackTitleSvg>
                 </S.TrackTitleImg>
                 <>
@@ -365,7 +364,7 @@ export function Playlist({ loading }) {
               </S.TrackAlbum>
               <>
                 <S.TrackTimeSvg alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                 </S.TrackTimeSvg>
                 <S.TrackTimeText>4:12</S.TrackTimeText>
               </>
@@ -377,7 +376,7 @@ export function Playlist({ loading }) {
               <S.TrackTitle>
                 <S.TrackTitleImg>
                   <S.TrackTitleSvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackTitleSvg>
                 </S.TrackTitleImg>
                 <>
@@ -396,7 +395,7 @@ export function Playlist({ loading }) {
               </S.TrackAlbum>
               <>
                 <S.TrackTimeSvg alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                 </S.TrackTimeSvg>
                 <S.TrackTimeText>2:54</S.TrackTimeText>
               </>
@@ -408,7 +407,7 @@ export function Playlist({ loading }) {
               <S.TrackTitle>
                 <S.TrackTitleImg>
                   <S.TrackTitleSvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackTitleSvg>
                 </S.TrackTitleImg>
                 <>
@@ -428,7 +427,7 @@ export function Playlist({ loading }) {
               </S.TrackAlbum>
               <>
                 <S.TrackTimeSvg alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                 </S.TrackTimeSvg>
                 <S.TrackTimeText>5:20</S.TrackTimeText>
               </>
@@ -440,7 +439,7 @@ export function Playlist({ loading }) {
               <S.TrackTitle>
                 <S.TrackTitleImg>
                   <S.TrackTitleSvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackTitleSvg>
                 </S.TrackTitleImg>
                 <>
@@ -460,7 +459,7 @@ export function Playlist({ loading }) {
               </S.TrackAlbum>
               <>
                 <S.TrackTimeSvg alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                 </S.TrackTimeSvg>
                 <S.TrackTimeText>3:41</S.TrackTimeText>
               </>
@@ -472,7 +471,7 @@ export function Playlist({ loading }) {
               <S.TrackTitle>
                 <S.TrackTitleImg>
                   <S.TrackTitleSvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackTitleSvg>
                 </S.TrackTitleImg>
                 <>
@@ -489,7 +488,7 @@ export function Playlist({ loading }) {
               </S.TrackAlbum>
               <>
                 <S.TrackTimeSvg alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                 </S.TrackTimeSvg>
                 <S.TrackTimeText>1:48</S.TrackTimeText>
               </>
@@ -501,7 +500,7 @@ export function Playlist({ loading }) {
               <S.TrackTitle>
                 <S.TrackTitleImg>
                   <S.TrackTitleSvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackTitleSvg>
                 </S.TrackTitleImg>
                 <>
@@ -522,7 +521,7 @@ export function Playlist({ loading }) {
               </S.TrackAlbum>
               <>
                 <S.TrackTimeSvg alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                 </S.TrackTimeSvg>
                 <S.TrackTimeText>3:32</S.TrackTimeText>
               </>
@@ -534,7 +533,7 @@ export function Playlist({ loading }) {
               <S.TrackTitle>
                 <S.TrackTitleImg>
                   <S.TrackTitleSvg alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
                   </S.TrackTitleSvg>
                 </S.TrackTitleImg>
                 <>
@@ -553,7 +552,7 @@ export function Playlist({ loading }) {
               </S.TrackAlbum>
               <>
                 <S.TrackTimeSvg alt="time">
-                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                  <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                 </S.TrackTimeSvg>
                 <S.TrackTimeText>3:36</S.TrackTimeText>
               </>
