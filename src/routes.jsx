@@ -12,7 +12,7 @@ import { NotFound } from './pages/404/NotFound'
 export const AppRoutes = () => {
   let isLoggedIn = Boolean(localStorage.getItem('Token'));
   if (isLoggedIn === true) {
-    return;
+    return <Main />;
   }
 
   return (
