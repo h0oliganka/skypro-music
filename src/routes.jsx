@@ -12,12 +12,10 @@ import { NotFound } from './pages/404/NotFound'
 export const AppRoutes = () => {
   let isLoggedIn = Boolean(localStorage.getItem('Token'));
   if (isLoggedIn === true) {
-    <Main />
-  } else {
-    <Login />
+    return;
   }
 
-  rreturn(
+  return (
     <Routes>
       <Route
         path="/"
