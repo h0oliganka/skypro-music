@@ -10,57 +10,20 @@ import { ProtectedRoute } from './pages/protected/protected'
 import { NotFound } from './pages/404/NotFound'
 
 export const AppRoutes = () => {
-  let isLoggedIn = Boolean(localStorage.getItem('Token'));
-  if (isLoggedIn === true) {
-    return <Main />;
+  let isLoggedIn = Boolean(localStorage.getItem('Token'))
+  if (!isLoggedIn) {
+    alert("введите пароль")
   }
 
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <ProtectedRoute isAllowed={isLoggedIn} redirectPath="/login">
-            <Main />
-          </ProtectedRoute>
-        }
-      ></Route>
-
-      <Route
-        path="/favorites"
-        element={
-          <ProtectedRoute isAllowed={isLoggedIn} redirectPath="/login">
-            <MyTracks />
-          </ProtectedRoute>
-        }
-      ></Route>
-
-      <Route
-        path="/category/1"
-        element={
-          <ProtectedRoute isAllowed={isLoggedIn} redirectPath="/login">
-            <PlaylistOfTheDay />
-          </ProtectedRoute>
-        }
-      ></Route>
-
-      <Route
-        path="/category/2"
-        element={
-          <ProtectedRoute isAllowed={isLoggedIn} redirectPath="/login">
-            <DanceHits />
-          </ProtectedRoute>
-        }
-      ></Route>
-
-      <Route
-        path="/category/3"
-        element={
-          <ProtectedRoute isAllowed={isLoggedIn} redirectPath="/login">
-            <IndieCharge />
-          </ProtectedRoute>
-        }
-      ></Route>
+      <Route element={<ProtectedRoute isAllowed={isLoggedIn} />}>
+        <Route path="/favorites" element={<MyTracks />} />
+        <Route path="/category/1" element={<PlaylistOfTheDay />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/category/2" element={<DanceHits />} />
+        <Route path="//category/3" element={<IndieCharge />} />
+      </Route>
 
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<RegisterUser />} />
