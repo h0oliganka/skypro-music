@@ -11,9 +11,6 @@ import { NotFound } from './pages/404/NotFound'
 
 export const AppRoutes = () => {
   let isLoggedIn = Boolean(localStorage.getItem('Token'))
-  if (!isLoggedIn) {
-    alert("введите пароль")
-  }
 
   return (
     <Routes>
