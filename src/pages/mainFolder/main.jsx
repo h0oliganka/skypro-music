@@ -5,8 +5,15 @@ import { Nav } from '../components/navFolder/nav'
 import { Search } from '../components/searchFolder/search'
 import { Sidebar } from '../components/sidebarFolder/sidebar'
 import * as S from './main.styled'
+import { useEffect, useState } from 'react'
 
-export function Main({ loading }) {
+export function Main() {
+  const [loading, setLoading] = useState(true)
+  const loadingBoot = () => setLoading(!loading)
+  useEffect(() => {
+    setTimeout(loadingBoot, 2000)
+  }, [])
+
   return (
     <S.Wrapper>
       <S.Container>

@@ -1,10 +1,24 @@
 import React from 'react'
 import * as S from './bar.styled'
+import { useRef, useState } from 'react'
 
 export function Bar() {
+  const [isPlaying, setIsPlaying] = useState(true)
+  const audioComponentRef = useRef(null)
+  const handleClick = () => {
+    if (isPlaying) {
+      audioComponentRef.current.pause()
+      setIsPlaying(false)
+    } else {
+      audioComponentRef.current.play()
+      setIsPlaying(true)
+    }
+  }
+
   return (
     <S.Bar>
       <S.BarContent>
+        <S.AudioComponent></S.AudioComponent>
         <S.BarPlayerProgress></S.BarPlayerProgress>
         <S.BarPlayerBlock>
           <S.BarPlayer>
@@ -15,7 +29,11 @@ export function Bar() {
                 </S.PlayerBtnPrevSvg>
               </S.PlayerBtnPrev>
               <S.PlayerBtnPlay>
-                <S.PlayerBtnPlaySvg className="_btn" alt="play">
+                <S.PlayerBtnPlaySvg
+                  className="_btn"
+                  alt="play"
+                  onClick={handleClick}
+                >
                   <use xlinkHref="/img/icon/sprite.svg#icon-play"></use>
                 </S.PlayerBtnPlaySvg>
               </S.PlayerBtnPlay>

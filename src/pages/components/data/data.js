@@ -6,6 +6,8 @@ export const tracks = [
     album: 'Welcome Reality',
     time: '4:44',
     id: '1',
+    genre: 'Pop',
+    year: "2015",
   },
   {
     title: 'Elektro',
@@ -14,6 +16,8 @@ export const tracks = [
     album: 'Elektro',
     time: '2:22',
     id: '2',
+    genre: 'Electro',
+    year: "2014",
   },
   {
     title: 'I’m Fire',
@@ -22,6 +26,8 @@ export const tracks = [
     album: 'I’m Fire',
     time: '2:22',
     id: '3',
+    genre: 'Hip-Hop',
+    year: "2010",
   },
   {
     title: 'Non Stop',
@@ -30,6 +36,7 @@ export const tracks = [
     album: 'Non Stop',
     time: '4:12',
     id: '4',
+    genre: 'Non Stop',
   },
   {
     title: 'Run Run',
@@ -79,6 +86,6 @@ export const tracks = [
     time: '3:36',
     id: '10',
   },
-];
+]
 
-console.log(tracks[0].title);
+console.log(tracks[0].title)

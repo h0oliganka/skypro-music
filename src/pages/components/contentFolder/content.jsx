@@ -1,6 +1,7 @@
 import React from 'react'
 import { Playlist } from '../playlistFolder/playlist'
 import * as S from './content.styled'
+import { PlaylistSkelet } from '../playlistFolder/playlistSkelet'
 
 export function Content({ loading }) {
   return (
@@ -15,7 +16,7 @@ export function Content({ loading }) {
           </S.PlaylistTitleSvg>
         </S.PlaylistTitlecol04>
       </S.ContentTitle>
-      <Playlist loading={loading} />
+      {loading ? <PlaylistSkelet /> : <Playlist />}
     </S.CenterBlockContent>
   )
 }
