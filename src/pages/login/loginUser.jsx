@@ -6,7 +6,7 @@ export const Login = () => {
 
   const navigate = useNavigate();
   const addToken = () => {
-    localStorage.setItem('Token', 'lfd123mkw1ewqsakl');
+    localStorage.setItem('Token', '{bef4a505-d547-4bfa-8a66-67cea0dd1b79}');
     navigate('/');
   };
 

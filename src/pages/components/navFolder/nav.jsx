@@ -3,7 +3,7 @@ import React from 'react'
 import * as S from './nav.styled'
 
 export function Nav() {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
   const toggleVisibility = () => setVisible(!visible)
 
   function toggleVisibilityDown(e) {
@@ -36,7 +36,7 @@ export function Nav() {
               <S.MenuLink to="/favorites">Мой плейлист</S.MenuLink>
             </S.MenuItem>
             <S.MenuItem>
-              <S.MenuLink to="/login">Войти</S.MenuLink>
+              <S.MenuLink to="/login">Выйти</S.MenuLink>
             </S.MenuItem>
           </S.MenuList>
         </S.NavMenu>

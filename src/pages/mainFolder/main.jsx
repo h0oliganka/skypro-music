@@ -6,13 +6,23 @@ import { Search } from '../components/searchFolder/search'
 import { Sidebar } from '../components/sidebarFolder/sidebar'
 import * as S from './main.styled'
 import { useEffect, useState } from 'react'
+import { getTrack } from '../api'
 
 export function Main() {
-  const [loading, setLoading] = useState(true)
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [activTrack, setActivTrack] = useState(null);
+  const [tracks, setTrackList] = useState([]);
   const loadingBoot = () => setLoading(!loading)
   useEffect(() => {
-    setTimeout(loadingBoot, 2000)
-  }, [])
+    getTrack()
+      .then((tracks) => {
+        setTrackList(tracks);
+        setLoading(false);
+      });
+    setTimeout(loadingBoot, 2000);
+  }, []);
+  console.log(tracks)
 
   return (
     <S.Wrapper>
@@ -21,7 +31,7 @@ export function Main() {
           <Nav />
           <S.MainCenterblock>
             <Search />
-            <Content loading={loading} />
+            <Content loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
           </S.MainCenterblock>
           <Sidebar loading={loading} />
         </S.Main>

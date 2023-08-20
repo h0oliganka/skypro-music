@@ -3,7 +3,8 @@ import { Playlist } from '../playlistFolder/playlist'
 import * as S from './content.styled'
 import { PlaylistSkelet } from '../playlistFolder/playlistSkelet'
 
-export function Content({ loading }) {
+export function Content({ loading, activTrack, isPlaying, setIsPlaying }) {
+
   return (
     <S.CenterBlockContent>
       <S.ContentTitle>
@@ -16,7 +17,7 @@ export function Content({ loading }) {
           </S.PlaylistTitleSvg>
         </S.PlaylistTitlecol04>
       </S.ContentTitle>
-      {loading ? <PlaylistSkelet /> : <Playlist />}
+      {loading ? <PlaylistSkelet /> : <Playlist activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} />}
     </S.CenterBlockContent>
   )
 }

@@ -8,13 +8,21 @@ import { DanceHits } from './pages/compilations/DanceHits'
 import { IndieCharge } from './pages/compilations/indieCharge'
 import { ProtectedRoute } from './pages/protected/protected'
 import { NotFound } from './pages/404/NotFound'
+import { useState } from 'react'
 
 export const AppRoutes = () => {
-  let isLoggedIn = Boolean(localStorage.getItem('Token'))
+  const [isLoggedIn, setIsLoggedIn] = useState();
+  const autoriz = () => {
+    if (isLoggedIn) {
+      Boolean(localStorage.getItem('Token'))
+    } else {
+      setIsLoggedIn
+    }
+  }
 
   return (
     <Routes>
-      <Route element={<ProtectedRoute isAllowed={isLoggedIn} />}>
+      <Route element={<ProtectedRoute isAllowed={autoriz} />}>
         <Route path="/favorites" element={<MyTracks />} />
         <Route path="/category/1" element={<PlaylistOfTheDay />} />
         <Route path="/" element={<Main />} />
