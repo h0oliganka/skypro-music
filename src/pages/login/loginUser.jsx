@@ -1,15 +1,8 @@
 import * as S from '../mainFolder/main.styled'
 import * as L from './login.styled'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
-export const Login = () => {
-
-  const navigate = useNavigate();
-  const addToken = () => {
-    localStorage.setItem('Token', '{bef4a505-d547-4bfa-8a66-67cea0dd1b79}');
-    navigate('/');
-  };
-
+export const Login = ({ onAuthButtonClick }) => {
   return (
     <S.Wrapper>
       <S.Container>
@@ -24,10 +17,7 @@ export const Login = () => {
               <L.InputItem type="password" placeholder="Пароль" />
             </L.InputBlock>
             <L.ButtonBlock>
-              <L.ButtonEnter
-                to="/"
-                onClick={addToken}
-              >
+              <L.ButtonEnter to="/" onClick={onAuthButtonClick}>
                 Войти
               </L.ButtonEnter>
 

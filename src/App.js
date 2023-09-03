@@ -3,19 +3,19 @@ import { useState } from 'react'
 import { GlobalStyle } from './pages/mainFolder/globalStyle'
 import { AppRoutes } from './routes'
 
-
 export function App() {
-  const [user, setUser] = useState(null)
-
-  const handleLogin = () => setUser({ login: 'hello', password: 'hello' })
-
-  const handleLogout = () => setUser(null)
+  const initialUserState = localStorage.getItem('user') === 'true'
+  const [isLoggedIn, setIsLoggedIn] = useState(initialUserState)
+  const handleLogin = () => {
+    localStorage.setItem('isLoggedIn', 'setIsLoggedIn')
+    setIsLoggedIn(true)
+  }
 
   return (
     <>
       <GlobalStyle />
-      <AppRoutes>
-        <Main onAuthButtonClick={user ? handleLogout : handleLogin} />
+      <AppRoutes isLoggedIn={isLoggedIn} onAuthButtonClick={handleLogin}>
+        <Main />
       </AppRoutes>
     </>
   )

@@ -1,7 +1,7 @@
 import * as S from '../mainFolder/main.styled'
 import * as R from '../register/register.styled'
 
-export const RegisterUser = () => {
+export const RegisterUser = ({ onAuthButtonClick }) => {
   return (
     <S.Wrapper>
       <S.Container>
@@ -21,7 +21,9 @@ export const RegisterUser = () => {
               />
             </R.InputBlock>
             <div>
-              <R.ButtonRegister to="/">Зарегистрироваться</R.ButtonRegister>
+              <R.ButtonRegister onClick={onAuthButtonClick} to="/">
+                Зарегистрироваться
+              </R.ButtonRegister>
             </div>
           </R.CenterBlockItem>
         </R.CenterBlock>
