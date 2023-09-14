@@ -24,7 +24,10 @@ export const AppRoutes = ({ isLoggedIn, onAuthButtonClick }) => {
         path="/login"
         element={<Login onAuthButtonClick={onAuthButtonClick} />}
       />
-      <Route path="/register" element={<RegisterUser />} />
+      <Route
+        path="/register"
+        element={<RegisterUser onAuthButtonClick={onAuthButtonClick} />}
+      />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )

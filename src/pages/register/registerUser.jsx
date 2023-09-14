@@ -21,7 +21,7 @@ export const RegisterUser = ({ onAuthButtonClick }) => {
               />
             </R.InputBlock>
             <div>
-              <R.ButtonRegister onClick={onAuthButtonClick} to="/">
+              <R.ButtonRegister to="/" onClick={onAuthButtonClick}>
                 Зарегистрироваться
               </R.ButtonRegister>
             </div>

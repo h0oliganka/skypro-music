@@ -1,6 +1,6 @@
 export async function getTrack() {
   const trackResponse = (
-    await fetch(`	https://painassasin.online/catalog/track/all/`)
+    await fetch(`https://skypro-music-api.skyeng.tech/catalog/track/all/`)
   ).json()
 
   if (!trackResponse) {
