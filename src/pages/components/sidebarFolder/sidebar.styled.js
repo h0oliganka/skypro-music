@@ -6,7 +6,7 @@ export const MainSidebar = styled.div`
   padding: 20px 90px 20px 78px;
 `
 
-export const SidebarPersonal = styled.div`
+export const SidebarPersonal = styled(NavLink)`
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

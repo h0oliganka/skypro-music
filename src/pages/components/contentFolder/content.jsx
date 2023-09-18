@@ -4,7 +4,6 @@ import * as S from './content.styled'
 import { PlaylistSkelet } from '../playlistFolder/playlistSkelet'
 
 export function Content({ loading, activTrack, isPlaying, setIsPlaying }) {
-
   return (
     <S.CenterBlockContent>
       <S.ContentTitle>
@@ -17,7 +16,6 @@ export function Content({ loading, activTrack, isPlaying, setIsPlaying }) {
           </S.PlaylistTitleSvg>
         </S.PlaylistTitlecol04>
       </S.ContentTitle>
-      {loading ? <PlaylistSkelet /> : <Playlist activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} />}
     </S.CenterBlockContent>
   )
 }

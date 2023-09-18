@@ -1,9 +1,12 @@
 import React from 'react'
 import * as S from './bar.styled'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
-export function Bar() {
-  const [isPlaying, setIsPlaying] = useState(true)
+export function Bar({ isPlaying, setIsPlaying, activTrack }) {
+  const [isRepeat, setIsRepeat] = useState(false)
+  const [volume, setVolume] = useState(1)
+  const [currentTime, setCurrentTime] = useState(0)
+  const [duration, setDuration] = useState(0)
   const audioComponentRef = useRef(null)
   const handleClick = () => {
     if (isPlaying) {
@@ -14,11 +17,55 @@ export function Bar() {
       setIsPlaying(true)
     }
   }
+  const repeatClick = () => {
+    audioComponentRef.current.loop = !isRepeat
+    setIsRepeat(!isRepeat)
+  }
+  const volumeOnChange = (event) => {
+    const newVolume = audioComponentRef.current.volume
+    setVolume(newVolume)
+    audioComponentRef.current.volume = event.target.value
+  }
+  const timeOnChange = (event) => {
+    audioComponentRef.current.currentTime = event.target.value
+  }
+  useEffect(() => {
+    const ref = audioComponentRef.current
 
+    const timeUpdate = () => {
+      if (ref.currentTime && ref.duration) {
+        setCurrentTime(ref.currentTime)
+        setDuration(ref.duration)
+      } else {
+        setCurrentTime(0)
+        setDuration(0)
+      }
+    }
+    ref.addEventListener('timeupdate', timeUpdate)
+
+    return () => {
+      ref.removeEventListener('timeupdate', timeUpdate)
+    }
+  })
+  const buttonPlug = () => alert('Еще не реализовано')
   return (
     <S.Bar>
       <S.BarContent>
-        <S.AudioComponent></S.AudioComponent>
+        <S.AudioComponent
+          controls
+          src={activTrack.track_file}
+          ref={audioComponentRef}
+          autoPlay
+        ></S.AudioComponent>
+        <S.StyledProgressInput
+          type="range"
+          min={0}
+          max={duration}
+          value={currentTime}
+          step={0.01}
+          onChange={timeOnChange}
+          $color="#ff0000"
+        />
         <S.BarPlayerProgress></S.BarPlayerProgress>
         <S.BarPlayerBlock>
           <S.BarPlayer>
@@ -34,7 +81,11 @@ export function Bar() {
                   alt="play"
                   onClick={handleClick}
                 >
-                  <use xlinkHref="/img/icon/sprite.svg#icon-play"></use>
+                  {isPlaying ? (
+                    <use xlinkHref="/img/icon/sprite.svg#icon-pause"></use>
+                  ) : (
+                    <use xlinkHref="/img/icon/sprite.svg#icon-play"></use>
+                  )}
                 </S.PlayerBtnPlaySvg>
               </S.PlayerBtnPlay>
               <S.BtnNext>
@@ -42,13 +93,17 @@ export function Bar() {
                   <use xlinkHref="/img/icon/sprite.svg#icon-next"></use>
                 </S.PlayerBtnNextSvg>
               </S.BtnNext>
-              <S.PlayerBtnRepeat className="_btn-icon">
-                <S.BtnRepeatSvg alt="repeat">
+              <S.PlayerBtnRepeat className="_btn-icon" onClick={repeatClick}>
+                <S.BtnRepeatSvg
+                  className="player__btn-repeat-svg"
+                  alt="repeat"
+                  $isRepeat={isRepeat}
+                >
                   <use xlinkHref="/img/icon/sprite.svg#icon-repeat"></use>
                 </S.BtnRepeatSvg>
               </S.PlayerBtnRepeat>
               <S.PlayerBtnShuffle className="_btn-icon">
-                <S.PlayerBtnShuffleSvg alt="shuffle">
+                <S.PlayerBtnShuffleSvg alt="shuffle" onClick={buttonPlug}>
                   <use xlinkHref="/img/icon/sprite.svg#icon-shuffle"></use>
                 </S.PlayerBtnShuffleSvg>
               </S.PlayerBtnShuffle>
@@ -63,12 +118,12 @@ export function Bar() {
                 </S.TrackPlayImage>
                 <S.TrackPlayAuthor>
                   <S.TrackPlayAuthorLink href="http://">
-                    Ты та...
+                    {activTrack.name}
                   </S.TrackPlayAuthorLink>
                 </S.TrackPlayAuthor>
                 <S.TrackPlayAlbum>
                   <S.TrackPlayAlbumLink href="http://">
-                    Баста
+                    {activTrack.author}
                   </S.TrackPlayAlbumLink>
                 </S.TrackPlayAlbum>
               </S.TrackPlayContain>
@@ -99,6 +154,11 @@ export function Bar() {
                   className="_btn"
                   type="range"
                   name="range"
+                  value={volume}
+                  min={0}
+                  max={1}
+                  step={0.01}
+                  onChange={volumeOnChange}
                 />
               </S.VolumeProgress>
             </S.VolumeContent>

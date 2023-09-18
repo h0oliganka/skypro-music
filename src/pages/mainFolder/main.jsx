@@ -7,21 +7,25 @@ import { Sidebar } from '../components/sidebarFolder/sidebar'
 import * as S from './main.styled'
 import { useEffect, useState } from 'react'
 import { getTrack } from '../api'
+import { Playlist } from '../components/playlistFolder/playlist'
+import { PlaylistSkelet } from '../components/playlistFolder/playlistSkelet'
 
 export function Main() {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [loading, setLoading] = useState(true);
-  const [activTrack, setActivTrack] = useState(null);
-  const [tracks, setTrackList] = useState([]);
-  const loadingBoot = () => setLoading(!loading)
+  const [isPlaying, setIsPlaying] = useState(true)
+  const [loading, setLoading] = useState(true)
+  const [activTrack, setActivTrack] = useState(null)
+  const [tracks, setTrackList] = useState([])
+  const [newApiError, setNewApiError] = useState(null)
   useEffect(() => {
     getTrack()
       .then((tracks) => {
-        setTrackList(tracks);
-        setLoading(false);
-      });
-    setTimeout(loadingBoot, 2000);
-  }, []);
+        setTrackList(tracks)
+        setLoading(false)
+      })
+      .catch((error) => {
+        setNewApiError(error.message)
+      })
+  }, [])
   console.log(tracks)
 
   return (
@@ -31,11 +35,35 @@ export function Main() {
           <Nav />
           <S.MainCenterblock>
             <Search />
-            <Content loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
+            <Content
+              loading={loading}
+              activTrack={activTrack}
+              isPlaying={isPlaying}
+              setIsPlaying={setIsPlaying}
+              setActivTrack={setActivTrack}
+            />
+            {newApiError ? <p>Не удалось загрузить данные</p> : null}
+            {loading ? (
+              <PlaylistSkelet />
+            ) : (
+              <Playlist
+                activTrack={activTrack}
+                isPlaying={isPlaying}
+                setIsPlaying={setIsPlaying}
+              />
+            )}
           </S.MainCenterblock>
-          <Sidebar loading={loading} />
+          <Sidebar loading={loading} activTrack={activTrack} />
         </S.Main>
-        <Bar />
+        <S.Bar>
+          {activTrack ? (
+            <Bar
+              activTrack={activTrack}
+              isPlaying={isPlaying}
+              setIsPlaying={setIsPlaying}
+            />
+          ) : null}
+        </S.Bar>
         <footer></footer>
       </S.Container>
     </S.Wrapper>
