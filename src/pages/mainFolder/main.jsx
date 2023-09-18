@@ -50,6 +50,7 @@ export function Main() {
                 activTrack={activTrack}
                 isPlaying={isPlaying}
                 setIsPlaying={setIsPlaying}
+                setActivTrack={setActivTrack}
               />
             )}
           </S.MainCenterblock>
