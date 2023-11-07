@@ -35,14 +35,7 @@ export function Main() {
           <Nav />
           <S.MainCenterblock>
             <Search />
-            <Content
-              loading={loading}
-              activTrack={activTrack}
-              isPlaying={isPlaying}
-              setIsPlaying={setIsPlaying}
-              setActivTrack={setActivTrack}
-            />
-            <Playlist />
+            <Content loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
           </S.MainCenterblock>
           <Sidebar loading={loading} activTrack={activTrack} />
         </S.Main>

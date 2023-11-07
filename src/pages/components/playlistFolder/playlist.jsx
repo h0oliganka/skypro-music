@@ -9,9 +9,10 @@ export function Playlist({ setActivTrack, setIsPlaying }) {
         <S.PlaylistItem
           key={track.id}
           onClick={() => {
-            setActivTrack(track);
-            setIsPlaying(true);
-          }}>
+            setActivTrack(track)
+            setIsPlaying(true)
+          }}
+        >
           <S.PlaylistTrack>
             <S.TrackTitle>
               <S.TrackTitleImg>
@@ -26,9 +27,7 @@ export function Playlist({ setActivTrack, setIsPlaying }) {
               </>
             </S.TrackTitle>
             <S.TrackAuthor>
-              <S.TrackAuthorLink>
-                {track.author}
-              </S.TrackAuthorLink>
+              <S.TrackAuthorLink>{track.author}</S.TrackAuthorLink>
             </S.TrackAuthor>
             <S.TrackAlbum>
               <S.TrackAlbumLink>{track.album}</S.TrackAlbumLink>
