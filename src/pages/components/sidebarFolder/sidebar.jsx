@@ -32,7 +32,7 @@ export function Sidebar({ loading }) {
         </S.MainSidebar>
       ) : (
         <S.MainSidebar>
-          <S.SidebarPersonal>
+          <S.SidebarPersonal to="/login">
             <S.SidebarAvatar src="/img/outsvg.svg" alt="out" />
           </S.SidebarPersonal>
           <S.SidebarBlock>

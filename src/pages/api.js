@@ -3,9 +3,10 @@ export async function getTrack() {
     await fetch(`https://skypro-music-api.skyeng.tech/catalog/track/all/`)
   ).json()
 
-  if (!trackResponse) {
+  if (!trackResponse.ok) {
     throw new Error('Ошибка сервера')
   }
 
-  return trackResponse
+  return trackResponse;
 }
+

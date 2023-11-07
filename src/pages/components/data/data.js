@@ -7,7 +7,7 @@ export const tracks = [
     time: '4:44',
     id: '1',
     genre: 'Pop',
-    year: "2015",
+    year: '2015',
   },
   {
     title: 'Elektro',
@@ -17,7 +17,7 @@ export const tracks = [
     time: '2:22',
     id: '2',
     genre: 'Electro',
-    year: "2014",
+    year: '2014',
   },
   {
     title: 'I’m Fire',
@@ -27,7 +27,7 @@ export const tracks = [
     time: '2:22',
     id: '3',
     genre: 'Hip-Hop',
-    year: "2010",
+    year: '2010',
   },
   {
     title: 'Non Stop',
