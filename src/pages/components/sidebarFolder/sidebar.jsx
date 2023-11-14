@@ -5,7 +5,7 @@ import * as S from './sidebar.styled'
 export function Sidebar({ loading }) {
   return (
     <div>
-      {/* {loading ? (
+      {loading ? (
         <S.MainSidebar>
           <S.SidebarPersonal>
             <S.SidebarAvatar src="/img/outsvg.svg" alt="out" />
@@ -30,7 +30,7 @@ export function Sidebar({ loading }) {
             </S.SidebarList>
           </S.SidebarBlock>
         </S.MainSidebar>
-      ) : ( */}
+      ) : (
         <S.MainSidebar>
           <S.SidebarPersonal to="/login">
             <S.SidebarAvatar src="/img/outsvg.svg" alt="out" />
@@ -55,7 +55,7 @@ export function Sidebar({ loading }) {
             </S.SidebarList>
           </S.SidebarBlock>
         </S.MainSidebar>
-      {/* )} */}
+      )}
     </div>
   )
 }

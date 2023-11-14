@@ -16,6 +16,7 @@ export function Main() {
   const [activTrack, setActivTrack] = useState(null)
   const [tracks, setTrackList] = useState([])
   const [newApiError, setNewApiError] = useState(null)
+  const loadingBoot = () => setLoading(!loading)
   useEffect(() => {
     getTrack()
       .then((tracks) => {
@@ -24,7 +25,8 @@ export function Main() {
       })
       .catch((error) => {
         setNewApiError(error.message)
-      })
+      });
+    setTimeout(loadingBoot, 5000);
   }, [])
   console.log(tracks)
 
@@ -36,11 +38,11 @@ export function Main() {
           <S.MainCenterblock>
             <Search />
             <Content loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
-            {/* {loading ? (
+            {loading ? (
               <PlaylistSkelet />
-            ) : ( */}
-            <Playlist loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
-            {/* )} */}
+            ) : (
+              <Playlist loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
+            )}
           </S.MainCenterblock>
           <Sidebar loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
         </S.Main>
