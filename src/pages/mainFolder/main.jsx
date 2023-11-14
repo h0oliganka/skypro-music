@@ -36,17 +36,17 @@ export function Main() {
           <S.MainCenterblock>
             <Search />
             <Content loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
+            {/* {loading ? (
+              <PlaylistSkelet />
+            ) : ( */}
             <Playlist loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
+            {/* )} */}
           </S.MainCenterblock>
-          <Sidebar loading={loading} activTrack={activTrack} />
+          <Sidebar loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
         </S.Main>
         <S.Bar>
           {activTrack ? (
-            <Bar
-              activTrack={activTrack}
-              isPlaying={isPlaying}
-              setIsPlaying={setIsPlaying}
-            />
+            <Bar loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
           ) : null}
         </S.Bar>
         <footer></footer>

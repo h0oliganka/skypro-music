@@ -3,7 +3,7 @@ import * as S from '../components/playlistFolder/playlist.styled'
 import * as M from './myTracks.styled'
 import Skeleton from '../components/skelet/skelet'
 
-export function TrackList({ loading }) {
+export function TrackList({ loading, activTrack }) {
   return (
     <M.CenterBlockContent>
       <M.ContentTitle>
@@ -16,7 +16,7 @@ export function TrackList({ loading }) {
           </M.PlaylistTitleSvg>
         </M.PlaylistTitlecol04>
       </M.ContentTitle>
-      <Playlist loading={loading} />
+      <Playlist loading={loading} activTrack={activTrack} />
     </M.CenterBlockContent>
   )
 }

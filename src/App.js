@@ -4,7 +4,7 @@ import { GlobalStyle } from './pages/mainFolder/globalStyle'
 import { AppRoutes } from './routes'
 
 export function App() {
-  const initialUserState = localStorage.getItem('isLoggedIn') === 'true'
+  const initialUserState = localStorage.getItem('isLoggedIn')
   const [isLoggedIn, setIsLoggedIn] = useState(initialUserState)
   const handleLogin = () => {
     localStorage.setItem('isLoggedIn', 'setIsLoggedIn')

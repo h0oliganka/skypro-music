@@ -4,7 +4,7 @@ import { TrackList } from './trackList'
 import { Bar } from '../components/barFolder/bar'
 import * as M from './myTracks.styled'
 
-export const MyTracks = ({ loading }) => {
+export const MyTracks = ({ loading, activTrack }) => {
   return (
     <S.Wrapper>
       <S.Container>
@@ -18,7 +18,7 @@ export const MyTracks = ({ loading }) => {
               <M.SearchText type="search" placeholder="Поиск" name="search" />
             </M.CenterblockSearch>
             <M.Centerblockh2>Мои треки</M.Centerblockh2>
-            <TrackList loading={loading} />
+            <TrackList loading={loading} activTrack={activTrack} />
           </M.MainCenterblock>
           <M.SidebarPersonal>
             <M.SidebarAvatar src="/img/outsvg.svg" alt="out" />
