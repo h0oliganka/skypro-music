@@ -10,10 +10,9 @@ import { getTrack } from '../api'
 import { Playlist } from '../components/playlistFolder/playlist'
 import { PlaylistSkelet } from '../components/playlistFolder/playlistSkelet'
 
-export function Main() {
+export function Main({ activTrack, setActivTrack }) {
   const [isPlaying, setIsPlaying] = useState(true)
   const [loading, setLoading] = useState(true)
-  const [activTrack, setActivTrack] = useState(null)
   const [tracks, setTrackList] = useState([])
   const [newApiError, setNewApiError] = useState(null)
   const loadingBoot = () => setLoading(!loading)
