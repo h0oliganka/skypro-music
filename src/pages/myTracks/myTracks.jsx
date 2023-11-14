@@ -4,7 +4,7 @@ import { TrackList } from './trackList'
 import { Bar } from '../components/barFolder/bar'
 import * as M from './myTracks.styled'
 
-export const MyTracks = ({ loading, activTrack }) => {
+export const MyTracks = ({ loading, activTrack, isPlaying, setIsPlaying, setActivTrack }) => {
   return (
     <S.Wrapper>
       <S.Container>
@@ -24,7 +24,7 @@ export const MyTracks = ({ loading, activTrack }) => {
             <M.SidebarAvatar src="/img/outsvg.svg" alt="out" />
           </M.SidebarPersonal>
         </S.Main>
-        <Bar />
+        <Bar loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
       </S.Container>
     </S.Wrapper>
   )
