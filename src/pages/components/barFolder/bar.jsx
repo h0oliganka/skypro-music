@@ -51,6 +51,23 @@ export function Bar({ isPlaying, setIsPlaying, activTrack }) {
   return (
     <S.Bar>
       <S.BarContent>
+        <S.Timer>
+          {Math.trunc(currentTime / 60) < 10
+            ? '0' + Math.trunc(currentTime / 60)
+            : Math.trunc(currentTime / 60)}
+          :
+          {Math.trunc(currentTime % 60) < 10
+            ? '0' + Math.trunc(currentTime % 60)
+            : Math.trunc(currentTime % 60)}
+          /
+          {Math.trunc(duration / 60) < 10
+            ? '0' + Math.trunc(duration / 60)
+            : Math.trunc(duration / 60)}
+          :
+          {Math.trunc(duration % 60) < 10
+            ? '0' + Math.trunc(duration % 60)
+            : Math.trunc(duration % 60)}
+        </S.Timer>
         <S.AudioComponent
           controls
           src={activTrack.track_file}

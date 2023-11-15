@@ -136,7 +136,7 @@ export const BtnRepeatSvg = styled.svg`
   width: 18px;
   height: 12px;
   fill: transparent;
-  stroke: #696969;
+  stroke: ${(props) => (props.$isRepeat ? 'white' : '#696969')};
 `
 
 export const PlayerBtnShuffle = styled.div`
@@ -159,7 +159,7 @@ export const PlayerBtnShuffleSvg = styled.svg`
   width: 19px;
   height: 12px;
   fill: transparent;
-  stroke: #696969;
+  stroke: ${(props) => (props.$isRepeat ? 'white' : '#696969')};
 `
 
 export const PlayerTrackPlay = styled.div`
@@ -324,6 +324,12 @@ export const VolumeProgress = styled.div`
 export const VolumeProgressLine = styled.input`
   width: 109px;
 `
+
+export const Timer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+`;
 
 export const StyledProgressInput = styled.input`
   --progress-height: 8px;
