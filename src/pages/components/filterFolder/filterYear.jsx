@@ -1,5 +1,5 @@
 import * as S from './filter.styled'
-import { tracks } from '../data/data'
+
 
 export function FilterYear() {
   return (

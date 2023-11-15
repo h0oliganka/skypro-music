@@ -159,23 +159,23 @@ export function Playlist({ loading }) {
                 </S.TrackTitleImg>
                 <div>
                   <S.TrackTitleLink href="http://">
-                    Guilt <S.TrackTitleSpan></S.TrackTitleSpan>
+                  {track.name}{' '} <S.TrackTitleSpan></S.TrackTitleSpan>
                   </S.TrackTitleLink>
                 </div>
               </S.TrackTitle>
               <S.TrackAuthor>
-                <S.TrackAuthorLink href="http://">Nero</S.TrackAuthorLink>
+                <S.TrackAuthorLink href="http://">{track.author}</S.TrackAuthorLink>
               </S.TrackAuthor>
               <S.TrackAlbum>
                 <S.TrackAlbumLink href="http://">
-                  Welcome Reality
+                {track.album}
                 </S.TrackAlbumLink>
               </S.TrackAlbum>
               <div>
                 <S.TrackTimeSvg alt="time">
                   <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
                 </S.TrackTimeSvg>
-                <S.TrackTimeText>4:44</S.TrackTimeText>
+                <S.TrackTimeText>{track.duration_in_seconds}</S.TrackTimeText>
               </div>
             </S.PlaylistTrack>
           </S.PlaylistItem>

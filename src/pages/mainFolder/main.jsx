@@ -40,7 +40,7 @@ export function Main({ activTrack, setActivTrack }) {
             {loading ? (
               <PlaylistSkelet />
             ) : (
-              <Playlist loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
+              <Playlist tracks={tracks} loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
             )}
           </S.MainCenterblock>
           <Sidebar loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
