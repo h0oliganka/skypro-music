@@ -14,9 +14,9 @@ export function App() {
   return (
     <>
       <GlobalStyle />
-      <AppRoutes isLoggedIn={isLoggedIn} onAuthButtonClick={handleLogin}>
-        <Main />
-      </AppRoutes>
+        <AppRoutes isLoggedIn={isLoggedIn} onAuthButtonClick={handleLogin}>
+          <Main />
+        </AppRoutes>
     </>
   )
 }
