@@ -35,7 +35,7 @@ export function Main({ activTrack, setActivTrack }) {
         <S.Main>
           <Nav />
           <S.MainCenterblock>
-            <Search />
+            <Search tracks={tracks} />
             <Content loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
             {newApiError ? <p>Не удалось загрузить данные</p> : null}
             {loading ? (

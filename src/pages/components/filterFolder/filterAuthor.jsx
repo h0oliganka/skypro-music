@@ -1,7 +1,7 @@
 import * as S from './filter.styled'
 
 
-export function FilterAuthor() {
+export function FilterAuthor({tracks}) {
   return (
     <S.CenterBlockFilterItemText>
       {tracks.map((track) => (

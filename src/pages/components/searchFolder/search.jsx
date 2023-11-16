@@ -5,7 +5,7 @@ import { FilterGenre } from '../filterFolder/filterGenre'
 import { FilterYear } from '../filterFolder/filterYear'
 import * as S from './search.styled'
 
-export function Search() {
+export function Search({tracks}) {
   const [visibleFilter, setVisibleFilter] = useState(null)
 
   const toggleVisibleFilter = (filter) => {
@@ -39,7 +39,7 @@ export function Search() {
             >
               исполнителю
             </S.FilterButton>
-            {visibleFilter === 'author' && <FilterAuthor />}
+            {visibleFilter === 'author' && <FilterAuthor tracks={tracks} />}
           </S.CenterblockFilterItem>
 
           <S.CenterblockFilterItem>
@@ -55,7 +55,7 @@ export function Search() {
             >
               году выпуска
             </S.FilterButton>
-            {visibleFilter === 'year' && <FilterYear />}
+            {visibleFilter === 'year' && <FilterYear tracks={tracks} />}
           </S.CenterblockFilterItem>
 
           <S.CenterblockFilterItem>
@@ -73,7 +73,7 @@ export function Search() {
             >
               жанру
             </S.FilterButton>
-            {visibleFilter === 'genre' && <FilterGenre />}
+            {visibleFilter === 'genre' && <FilterGenre tracks={tracks} />}
           </S.CenterblockFilterItem>
         </S.CenterblockFilterItem>
       </S.CenterblockFilter>

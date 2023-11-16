@@ -1,7 +1,7 @@
 import * as S from './filter.styled'
 
 
-export function FilterGenre() {
+export function FilterGenre({tracks}) {
   return (
     <S.CenterBlockFilterItemText>
       {tracks.map((track) => (
