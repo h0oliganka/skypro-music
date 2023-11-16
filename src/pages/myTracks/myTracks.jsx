@@ -3,6 +3,7 @@ import { Nav } from '../components/navFolder/nav'
 import { TrackList } from './trackList'
 import { Bar } from '../components/barFolder/bar'
 import * as M from './myTracks.styled'
+import { NavLink } from 'react-router-dom'
 
 export const MyTracks = ({ loading, activTrack, isPlaying, setIsPlaying, setActivTrack }) => {
   return (
@@ -20,9 +21,14 @@ export const MyTracks = ({ loading, activTrack, isPlaying, setIsPlaying, setActi
             <M.Centerblockh2>Мои треки</M.Centerblockh2>
             <TrackList loading={loading} activTrack={activTrack} />
           </M.MainCenterblock>
-          <M.SidebarPersonal>
-            <M.SidebarAvatar src="/img/outsvg.svg" alt="out" />
-          </M.SidebarPersonal>
+          <S.SidebarPersonal>
+            <S.SidebarPersonalName className="sidebar__personal-name">
+              {isLoggedIn.username}
+            </S.SidebarPersonalName>
+            <NavLink to="/login">
+              <S.SidebarAvatar src="/img/outsvg.svg" alt="out" onClick={logOut} />
+            </NavLink>
+          </S.SidebarPersonal>
         </S.Main>
         <Bar loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
       </S.Container>

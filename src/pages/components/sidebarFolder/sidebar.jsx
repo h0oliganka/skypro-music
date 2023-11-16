@@ -1,8 +1,15 @@
 import Skeleton from '../skelet/skelet'
 import React from 'react'
 import * as S from './sidebar.styled'
+import { useUserContext } from '../../../context/user'
+import { NavLink } from 'react-router-dom';
 
 export function Sidebar({ loading }) {
+  const { isLoggedIn } = useUserContext();
+  console.log(isLoggedIn);
+  const logOut = () => {
+    localStorage.clear();
+  };
   return (
     <div>
       {loading ? (
@@ -32,8 +39,13 @@ export function Sidebar({ loading }) {
         </S.MainSidebar>
       ) : (
         <S.MainSidebar>
-          <S.SidebarPersonal to="/login">
-            <S.SidebarAvatar src="/img/outsvg.svg" alt="out" />
+          <S.SidebarPersonal>
+            <S.SidebarPersonalName className="sidebar__personal-name">
+              {isLoggedIn.username}
+            </S.SidebarPersonalName>
+            <NavLink to="/login">
+              <S.SidebarAvatar src="/img/outsvg.svg" alt="out" onClick={logOut} />
+            </NavLink>
           </S.SidebarPersonal>
           <S.SidebarBlock>
             <S.SidebarList>

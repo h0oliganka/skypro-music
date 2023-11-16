@@ -44,3 +44,38 @@ export const MainCenterblock = styled.div`
   flex-grow: 3;
   padding: 20px 40px 20px 39px;
 `
+
+export const SidebarAvatar = styled.img`
+  width: 43px;
+  height: 43px;
+  background-color: #313131;
+  border-radius: 50%;
+  cursor: pointer;
+`
+
+export const SidebarPersonalName = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-right: 16px;
+`
+
+export const SidebarPersonal = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 36px 91px 0px 201px;
+  flex-direction: column-reverse;
+`

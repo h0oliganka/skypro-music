@@ -4,6 +4,7 @@ import * as S from '../mainFolder/main.styled'
 import { Nav } from '../components/navFolder/nav'
 import { TrackList } from '../myTracks/trackList'
 import { Bar } from '../components/barFolder/bar'
+import { NavLink } from 'react-router-dom'
 
 export function IndieCharge({ loading }) {
   return (
@@ -21,9 +22,14 @@ export function IndieCharge({ loading }) {
             <M.Centerblockh2>Инди заряд</M.Centerblockh2>
             <TrackList loading={loading} />
           </M.MainCenterblock>
-          <M.SidebarPersonal>
-            <M.SidebarAvatar src="/img/outsvg.svg" alt="out" />
-          </M.SidebarPersonal>
+          <S.SidebarPersonal>
+            <S.SidebarPersonalName className="sidebar__personal-name">
+              {isLoggedIn.username}
+            </S.SidebarPersonalName>
+            <NavLink to="/login">
+              <S.SidebarAvatar src="/img/outsvg.svg" alt="out" onClick={logOut} />
+            </NavLink>
+          </S.SidebarPersonal>
         </S.Main>
         <Bar />
       </S.Container>
