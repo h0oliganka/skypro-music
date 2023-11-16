@@ -20,12 +20,12 @@ export function Main({ activTrack, setActivTrack }) {
     getTrack()
       .then((tracks) => {
         setTrackList(tracks)
-        setLoading(false)
       })
       .catch((error) => {
         setNewApiError(error.message)
-      });
-    setTimeout(loadingBoot, 5000);
+      }).finally(() => {
+        setLoading(false)
+      })
   }, [])
   console.log(tracks)
 
