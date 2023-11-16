@@ -6,7 +6,7 @@ import { Search } from '../components/searchFolder/search'
 import { Sidebar } from '../components/sidebarFolder/sidebar'
 import * as S from './main.styled'
 import { useEffect, useState } from 'react'
-import { getTrack } from '../api'
+import { getTrack } from '../../api/track'
 import { Playlist } from '../components/playlistFolder/playlist'
 import { PlaylistSkelet } from '../components/playlistFolder/playlistSkelet'
 

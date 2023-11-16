@@ -1,6 +1,4 @@
 import { Routes, Route } from 'react-router-dom'
-import { Login } from './pages/login/loginUser'
-import { RegisterUser } from './pages/register/registerUser'
 import { Main } from './pages/mainFolder/main'
 import { MyTracks } from './pages/myTracks/myTracks'
 import { PlaylistOfTheDay } from './pages/compilations/playlistOfTheDay'
@@ -9,8 +7,9 @@ import { IndieCharge } from './pages/compilations/indieCharge'
 import { ProtectedRoute } from './pages/protected/protected'
 import { NotFound } from './pages/404/NotFound'
 import { useState } from 'react'
+import AuthPage from './pages/auth/AuthPage'
 
-export const AppRoutes = ({ isLoggedIn, onAuthButtonClick }) => {
+export const AppRoutes = ({ isLoggedIn }) => {
 
   const [activTrack, setActivTrack] = useState(null)
 
@@ -26,11 +25,11 @@ export const AppRoutes = ({ isLoggedIn, onAuthButtonClick }) => {
 
       <Route
         path="/login"
-        element={<Login onAuthButtonClick={onAuthButtonClick} />}
+        element={<AuthPage isLoginMode={true} />}
       />
       <Route
         path="/register"
-        element={<RegisterUser onAuthButtonClick={onAuthButtonClick} />}
+        element={<AuthPage isLoginMode={false} />}
       />
       <Route path="*" element={<NotFound />} />
     </Routes>
