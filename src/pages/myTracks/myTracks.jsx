@@ -23,7 +23,7 @@ export const MyTracks = ({ loading, activTrack, isPlaying, setIsPlaying, setActi
           </M.MainCenterblock>
           <S.SidebarPersonal>
             <S.SidebarPersonalName className="sidebar__personal-name">
-              {isLoggedIn.username}
+              {currentUser.username}
             </S.SidebarPersonalName>
             <NavLink to="/login">
               <S.SidebarAvatar src="/img/outsvg.svg" alt="out" onClick={logOut} />

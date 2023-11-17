@@ -8,12 +8,12 @@ import { store } from './pages/store/store'
 
 export function App() {
 
-  const [isLoggedIn, setIsLoggedIn] = useState(
+  const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem('user')),
   );
 
   return (
-    <UserContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+    <UserContext.Provider value={{ currentUser, setCurrentUser }}>
       <Provider store={store}>
         <GlobalStyle />
         <AppRoutes >

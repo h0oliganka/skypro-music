@@ -5,8 +5,8 @@ import { useUserContext } from '../../../context/user'
 import { NavLink } from 'react-router-dom';
 
 export function Sidebar({ loading }) {
-  const { isLoggedIn } = useUserContext();
-  console.log(isLoggedIn);
+  const { currentUser } = useUserContext();
+  console.log(currentUser);
   const logOut = () => {
     localStorage.clear();
   };
@@ -41,7 +41,7 @@ export function Sidebar({ loading }) {
         <S.MainSidebar>
           <S.SidebarPersonal>
             <S.SidebarPersonalName className="sidebar__personal-name">
-              {isLoggedIn.username}
+              {currentUser.username}
             </S.SidebarPersonalName>
             <NavLink to="/login">
               <S.SidebarAvatar src="/img/outsvg.svg" alt="out" onClick={logOut} />

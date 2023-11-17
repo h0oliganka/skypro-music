@@ -9,13 +9,13 @@ import { NotFound } from './pages/404/NotFound'
 import { useState } from 'react'
 import AuthPage from './pages/auth/AuthPage'
 
-export const AppRoutes = ({ isLoggedIn }) => {
+export const AppRoutes = ({ currentUser }) => {
 
   const [activTrack, setActivTrack] = useState(null)
 
   return (
     <Routes>
-      <Route element={<ProtectedRoute isAllowed={isLoggedIn} activTrack={activTrack} setActivTrack={setActivTrack} />}>
+      <Route element={<ProtectedRoute isAllowed={Boolean(localStorage.getItem('user'))} />}>
         <Route path="/favorites" element={<MyTracks activTrack={activTrack} setActivTrack={setActivTrack} />} />
         <Route path="/category/1" element={<PlaylistOfTheDay />} />
         <Route path="/" element={<Main activTrack={activTrack} setActivTrack={setActivTrack} />} />

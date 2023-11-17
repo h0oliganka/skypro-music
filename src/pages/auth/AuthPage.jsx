@@ -5,26 +5,29 @@ import { useNavigate } from "react-router-dom";
 import { useUserContext } from '../../context/user'
 import { registerUser, loginUser } from '../../api/user';
 
-export default function AuthPage({ isLoginMode = false }) {
+export default function AuthPage({ isLoginMode }) {
     const [error, setError] = useState(null);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [repeatPassword, setRepeatPassword] = useState("");
     const navigate = useNavigate();
     const [buttonDisableStatus, setButtonDisableStatus] = useState(false);
-    const { setIsLoggedIn } = useUserContext();
+    const { setCurrentUser } = useUserContext();
 
     const handleLogin = async ({ email, password }) => {
         setButtonDisableStatus(true);
-        if (password == false || email == false) {
-            setError('Укажите почту/пароль');
+        if (email == false) {
+            setError('Не указана почта');
+            setButtonDisableStatus(false);
+        } else if (password == false) {
+            setError('Не указан пароль');
             setButtonDisableStatus(false);
         } else {
             loginUser({ email, password })
                 .then((response) => {
                     localStorage.setItem('user', JSON.stringify(response));
                     setButtonDisableStatus(false);
-                    setIsLoggedIn(JSON.parse(localStorage.getItem('user')));
+                    setCurrentUser(JSON.parse(localStorage.getItem('user')));
                     navigate('/');
                 })
                 .catch((error) => {
@@ -37,10 +40,13 @@ export default function AuthPage({ isLoginMode = false }) {
     const handleRegister = async () => {
         setButtonDisableStatus(true);
         if (password !== repeatPassword) {
-            setError('Пароли должны совпадать');
+            setError('Пароли не совпадают');
             setButtonDisableStatus(false);
-        } else if (password == false || email == false) {
-            setError('Укажите почту/пароль');
+        } else if (email == false) {
+            setError('Не указана почта');
+            setButtonDisableStatus(false);
+        } else if (password == false) {
+            setError('Не указан пароль');
             setButtonDisableStatus(false);
         } else {
             registerUser({ email, password })
