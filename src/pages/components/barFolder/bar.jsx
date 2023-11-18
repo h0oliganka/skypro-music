@@ -17,11 +17,11 @@ export function Bar({ isPlaying, setIsPlaying, activTrack }) {
   const [volume, setVolume] = useState(1)
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
-  const tracks = useSelector((store) => {store.AudioPlayer.trackList});
-  const shuffledTrackList = useSelector((store) => {store.AudioPlayer.shuffledTrackList});;
-  const currentTrack = useSelector((store) => {store.AudioPlayer.currentTrack});
-  const playingStatus = useSelector((store) => {store.AudioPlayer.playing});
-  const shuffleStatus = useSelector((store) => {store.AudioPlayer.shuffled});
+  const tracks = useSelector((store) => { store.AudioPlayer.trackList });
+  const shuffledTrackList = useSelector((store) => { store.AudioPlayer.shuffledTrackList });;
+  const currentTrack = useSelector((store) => { store.AudioPlayer.currentTrack });
+  const playingStatus = useSelector((store) => { store.AudioPlayer.playing });
+  const shuffleStatus = useSelector((store) => { store.AudioPlayer.shuffled });
   const audioComponentRef = useRef(null);
   const getCurrentTrackList = () => {
     if (shuffleStatus === false) {
@@ -30,6 +30,7 @@ export function Bar({ isPlaying, setIsPlaying, activTrack }) {
       return shuffledTrackList;
     }
   };
+
   const currentTrackList = getCurrentTrackList();
   const currentTrackId = useSelector(currentTrackIdSelector);
   const currentTrackIndex = currentTrackList.findIndex(
@@ -101,7 +102,7 @@ export function Bar({ isPlaying, setIsPlaying, activTrack }) {
     ref.addEventListener('timeupdate', timeUpdate);
 
     return () => {
-    ref.removeEventListener('timeupdate', timeUpdate);
+      ref.removeEventListener('timeupdate', timeUpdate);
     };
   });
   return (
@@ -177,7 +178,7 @@ export function Bar({ isPlaying, setIsPlaying, activTrack }) {
               </S.PlayerBtnRepeat>
               <S.PlayerBtnShuffle className="_btn-icon">
                 <S.PlayerBtnShuffleSvg alt="shuffle" onClick={shuffleToggle}
-                $shuffleStatus={shuffleStatus}>
+                  $shuffleStatus={shuffleStatus}>
                   <use xlinkHref="/img/icon/sprite.svg#icon-shuffle"></use>
                 </S.PlayerBtnShuffleSvg>
               </S.PlayerBtnShuffle>
