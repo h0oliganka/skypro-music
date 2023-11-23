@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 import { getTrack } from '../../api/track'
 import { Playlist } from '../components/playlistFolder/playlist'
 import { PlaylistSkelet } from '../components/playlistFolder/playlistSkelet'
+import { useSelector } from 'react-redux'
 
 export function Main({ activTrack, setActivTrack }) {
   const [isPlaying, setIsPlaying] = useState(true)
@@ -16,6 +17,7 @@ export function Main({ activTrack, setActivTrack }) {
   const [tracks, setTrackList] = useState([])
   const [newApiError, setNewApiError] = useState(null)
   const loadingBoot = () => setLoading(!loading)
+  const currentTrack = useSelector((store) => store.AudioPlayer.currentTrack);
   useEffect(() => {
     getTrack()
       .then((tracks) => {
@@ -46,11 +48,7 @@ export function Main({ activTrack, setActivTrack }) {
           </S.MainCenterblock>
           <Sidebar loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
         </S.Main>
-        <S.Bar>
-          {activTrack ? (
-            <Bar loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
-          ) : null}
-        </S.Bar>
+        <S.Bar> {currentTrack.id ? <Bar /> : null} </S.Bar>
         <footer></footer>
       </S.Container>
     </S.Wrapper>

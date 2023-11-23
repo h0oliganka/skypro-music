@@ -12,11 +12,11 @@ import {
 import { useSelector, useDispatch } from 'react-redux'
 import { currentTrackIdSelector } from '../../store/selectors'
 
-export function Bar({ isPlaying, setIsPlaying, activTrack }) {
-  const [isRepeat, setIsRepeat] = useState(false)
-  const [volume, setVolume] = useState(1)
-  const [currentTime, setCurrentTime] = useState(0)
-  const [duration, setDuration] = useState(0)
+export function Bar() {
+  const [volume, setVolume] = useState(1);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const isRepeat = useSelector((store) => { store.AudioPlayer.player.isRepeat });
   const tracks = useSelector((store) => { store.AudioPlayer.trackList });
   const shuffledTrackList = useSelector((store) => { store.AudioPlayer.shuffledTrackList });;
   const currentTrack = useSelector((store) => { store.AudioPlayer.currentTrack });
@@ -30,7 +30,6 @@ export function Bar({ isPlaying, setIsPlaying, activTrack }) {
       return shuffledTrackList;
     }
   };
-
   const currentTrackList = getCurrentTrackList();
   const currentTrackId = useSelector(currentTrackIdSelector);
   const currentTrackIndex = currentTrackList.findIndex(
@@ -90,7 +89,7 @@ export function Bar({ isPlaying, setIsPlaying, activTrack }) {
   useEffect(() => {
     const ref = audioComponentRef.current;
 
-    const timeUpdate = () => {
+    const timeUpdate = (event) => {
       if (ref.currentTime && ref.duration) {
         setCurrentTime(ref.currentTime);
         setDuration(ref.duration);
@@ -105,6 +104,7 @@ export function Bar({ isPlaying, setIsPlaying, activTrack }) {
       ref.removeEventListener('timeupdate', timeUpdate);
     };
   });
+
   return (
     <S.Bar>
       <S.BarContent>
@@ -127,7 +127,7 @@ export function Bar({ isPlaying, setIsPlaying, activTrack }) {
         </S.Timer>
         <S.AudioComponent
           controls
-          src={activTrack.track_file}
+          src={currentTrack.track_file}
           ref={audioComponentRef}
           autoPlay
         ></S.AudioComponent>
