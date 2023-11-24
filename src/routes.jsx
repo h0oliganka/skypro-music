@@ -16,9 +16,9 @@ export const AppRoutes = ({ currentUser }) => {
   return (
     <Routes>
       <Route element={<ProtectedRoute isAllowed={Boolean(localStorage.getItem('user'))} />}>
-        <Route path="/favorites" element={<MyTracks activTrack={activTrack} setActivTrack={setActivTrack} />} />
+        <Route path="/favorites" element={<MyTracks setActivTrack={setActivTrack} />} />
         <Route path="/category/1" element={<PlaylistOfTheDay />} />
-        <Route path="/" element={<Main activTrack={activTrack} setActivTrack={setActivTrack} />} />
+        <Route path="/" element={<Main setActivTrack={setActivTrack} />} />
         <Route path="/category/2" element={<DanceHits />} />
         <Route path="//category/3" element={<IndieCharge />} />
       </Route>

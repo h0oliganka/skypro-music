@@ -10,8 +10,10 @@ import { getTrack } from '../../api/track'
 import { Playlist } from '../components/playlistFolder/playlist'
 import { PlaylistSkelet } from '../components/playlistFolder/playlistSkelet'
 import { useSelector } from 'react-redux'
+import { useGetTracksQuery } from '../store/services'
 
-export function Main({ activTrack, setActivTrack }) {
+export function Main({ setActivTrack }) {
+  const { data } = useGetTracksQuery();
   const [isPlaying, setIsPlaying] = useState(true)
   const [loading, setLoading] = useState(true)
   const [tracks, setTrackList] = useState([])
@@ -38,15 +40,15 @@ export function Main({ activTrack, setActivTrack }) {
           <Nav />
           <S.MainCenterblock>
             <Search tracks={tracks} />
-            <Content loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
+            <Content loading={loading} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
             {newApiError ? <p>Не удалось загрузить данные</p> : null}
             {loading ? (
               <PlaylistSkelet />
             ) : (
-              <Playlist tracks={tracks} loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
+              <Playlist data={data} loading={loading} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
             )}
           </S.MainCenterblock>
-          <Sidebar loading={loading} activTrack={activTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
+          <Sidebar loading={loading} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
         </S.Main>
         <S.Bar> {currentTrack.id ? <Bar /> : null} </S.Bar>
         <footer></footer>

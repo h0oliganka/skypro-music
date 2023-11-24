@@ -5,7 +5,7 @@ import { Bar } from '../components/barFolder/bar'
 import * as M from './myTracks.styled'
 import { NavLink } from 'react-router-dom'
 
-export const MyTracks = ({ loading, activTrack, isPlaying, setIsPlaying, setActivTrack }) => {
+export const MyTracks = ({ data, loading, isPlaying, setIsPlaying }) => {
   return (
     <S.Wrapper>
       <S.Container>
@@ -19,7 +19,7 @@ export const MyTracks = ({ loading, activTrack, isPlaying, setIsPlaying, setActi
               <M.SearchText type="search" placeholder="Поиск" name="search" />
             </M.CenterblockSearch>
             <M.Centerblockh2>Мои треки</M.Centerblockh2>
-            <TrackList loading={loading} activTrack={activTrack} />
+            <TrackList loading={loading} activTrack={activTrack} data={data} />
           </M.MainCenterblock>
           <S.SidebarPersonal>
             <S.SidebarPersonalName className="sidebar__personal-name">

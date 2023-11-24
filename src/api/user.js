@@ -47,3 +47,53 @@ export const loginUser = async ({ email, password }) => {
     return response;
 };
 
+export const getUserToken = async ({ email, password }) => {
+    const data = {
+        method: 'POST',
+        body: JSON.stringify({
+            email: email,
+            password: password,
+        }),
+        headers: {
+            // API требует обязательного указания заголовка content-type, так апи понимает что мы посылаем ему json строчку в теле запроса
+            'content-type': 'application/json',
+        },
+    };
+    const registerRequest = await fetch(
+        `https://skypro-music-api.skyeng.tech/user/token/`,
+        data,
+    );
+    const response = await registerRequest.json();
+    console.log(response);
+    if (registerRequest.status === 401) {
+        throw new Error(response.detail);
+    }
+
+
+    return response;
+};
+
+export const refreshUserToken = async () => {
+    const data = {
+        method: 'POST',
+        body: JSON.stringify({
+            refresh: JSON.parse(localStorage.getItem('refreshToken'))
+        }),
+        headers: {
+            // API требует обязательного указания заголовка content-type, так апи понимает что мы посылаем ему json строчку в теле запроса
+            'content-type': 'application/json',
+        },
+    };
+    const registerRequest = await fetch(
+        `https://skypro-music-api.skyeng.tech/user/token/refresh/`,
+        data,
+    );
+    const response = await registerRequest.json();
+    console.log(response);
+    if (registerRequest.status === 401) {
+        throw new Error(response.detail);
+    }
+
+    return response;
+};
+

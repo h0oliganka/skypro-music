@@ -1,20 +1,26 @@
 import React from 'react'
 import * as S from './playlist.styled'
+import { useDispatch, useSelector } from 'react-redux';
+import { crateTrackList, setCurrentTrack } from '../../store/creators';
+import { useAddLikeMutation, useRemoveLikeMutation } from '../../store/services';
 
 
-export function Playlist({ tracks, setActivTrack, setIsPlaying }) {
+export function Playlist({ data }) {
+  const pageType = useSelector((store) => store.AudioPlayer.currentPage);
+  const [addLike] = useAddLikeMutation();
+  const [removeLike] = useRemoveLikeMutation();
+  const userId = JSON.parse(localStorage.getItem('user')).id;
+  const dispatch = useDispatch();
+
   return (
     <S.ContentPlaylist>
-      {tracks.map((track) => (
-        <S.PlaylistItem
-          key={track.id}
-          onClick={() => {
-            setActivTrack(track)
-            setIsPlaying(true)
-          }}
-        >
+      {data.map((track) => (
+        <S.PlaylistItem key={track.id}>
           <S.PlaylistTrack>
-            <S.TrackTitle>
+            <S.TrackTitle onClick={() => {
+              dispatch(setCurrentTrack(track));
+              dispatch(crateTrackList(data));
+            }}>
               <S.TrackTitleImg>
                 <S.TrackTitleSvg alt="music">
                   <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
@@ -33,10 +39,15 @@ export function Playlist({ tracks, setActivTrack, setIsPlaying }) {
               <S.TrackAlbumLink>{track.album}</S.TrackAlbumLink>
             </S.TrackAlbum>
 
-            <S.TrackTimeSvg alt="time">
+            <S.TrackTimeSvg alt="time" onClick={() => {
+              pageType === 'myTracks' ? removeLike(track.id) :
+                track.stared_user.some((user) => user['id'] === userId)
+                  ? removeLike(track.id)
+                  : addLike(track.id);
+            }}>
               <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
             </S.TrackTimeSvg>
-            <S.TrackTimeText> {track.time} </S.TrackTimeText>
+            <S.TrackTimeText> {track.duration_in_seconds} </S.TrackTimeText>
           </S.PlaylistTrack>
         </S.PlaylistItem>
       ))}
