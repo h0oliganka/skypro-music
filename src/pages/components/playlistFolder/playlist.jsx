@@ -5,7 +5,7 @@ import { crateTrackList, setCurrentTrack } from '../../store/creators';
 import { useAddLikeMutation, useRemoveLikeMutation } from '../../store/services';
 
 
-export function Playlist({ data }) {
+export function Playlist({ data = []}) {
   const pageType = useSelector((store) => store.AudioPlayer.currentPage);
   const [addLike] = useAddLikeMutation();
   const [removeLike] = useRemoveLikeMutation();

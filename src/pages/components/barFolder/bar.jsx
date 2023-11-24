@@ -30,6 +30,7 @@ export function Bar() {
       return shuffledTrackList;
     }
   };
+
   const currentTrackList = getCurrentTrackList();
   const currentTrackId = useSelector(currentTrackIdSelector);
   const currentTrackIndex = currentTrackList.findIndex(
