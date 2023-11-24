@@ -50,7 +50,11 @@ export function Main({ setActivTrack }) {
           </S.MainCenterblock>
           <Sidebar loading={loading} isPlaying={isPlaying} setIsPlaying={setIsPlaying} setActivTrack={setActivTrack} />
         </S.Main>
-        <S.Bar> {currentTrack.id ? <Bar /> : null} </S.Bar>
+        {currentTrack && (
+          <S.Bar>
+            <Bar currentTrack={currentTrack} />
+          </S.Bar>
+        )}
         <footer></footer>
       </S.Container>
     </S.Wrapper>

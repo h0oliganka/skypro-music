@@ -12,14 +12,13 @@ import {
 import { useSelector, useDispatch } from 'react-redux'
 import { currentTrackIdSelector } from '../../store/selectors'
 
-export function Bar() {
+export function Bar({ currentTrack }) {
   const [volume, setVolume] = useState(1);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const isRepeat = useSelector((store) => { store.AudioPlayer.player.isRepeat });
   const tracks = useSelector((store) => { store.AudioPlayer.trackList });
-  const shuffledTrackList = useSelector((store) => { store.AudioPlayer.shuffledTrackList });;
-  const currentTrack = useSelector((store) => { store.AudioPlayer.currentTrack });
+  const shuffledTrackList = useSelector((store) => { store.AudioPlayer.shuffledTrackList });
   const playingStatus = useSelector((store) => { store.AudioPlayer.playing });
   const shuffleStatus = useSelector((store) => { store.AudioPlayer.shuffled });
   const audioComponentRef = useRef(null);

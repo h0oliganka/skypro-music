@@ -3,8 +3,11 @@ import { styled } from 'styled-components'
 export const Wrapper = styled.div`
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
   background-color: #383838;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 8px;
 `
 
 export const Bar = styled.div`

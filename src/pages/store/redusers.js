@@ -12,7 +12,7 @@ import {
 
 const initialState = {
     trackList: [],
-    currentTrack: {},
+    currentTrack: null,
     playing: false,
     shuffled: false,
     shuffledTrackList: [],
