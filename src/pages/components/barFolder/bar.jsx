@@ -32,7 +32,7 @@ export function Bar({ currentTrack }) {
 
   const currentTrackList = getCurrentTrackList();
   const currentTrackId = useSelector(currentTrackIdSelector);
-  const currentTrackIndex = currentTrackList.findIndex(
+  const currentTrackIndex = currentTrackList?.findIndex(
     (currentTrack) => currentTrack.id === currentTrackId,
   );
   const dispatch = useDispatch();

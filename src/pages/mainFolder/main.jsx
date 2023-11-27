@@ -18,7 +18,6 @@ export function Main({ setActivTrack }) {
   const [loading, setLoading] = useState(true)
   const [tracks, setTrackList] = useState([])
   const [newApiError, setNewApiError] = useState(null)
-  const loadingBoot = () => setLoading(!loading)
   const currentTrack = useSelector((store) => store.AudioPlayer.currentTrack);
   useEffect(() => {
     getTrack()
