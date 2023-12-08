@@ -62,14 +62,14 @@ export function Bar({ isPlaying, currentTrack, setIsPlaying }) {
   };
 
   const nextTrackToggle = () => {
-    if (currentTrackIndex < tracks.length - 1) {
+    if (currentTrackIndex < tracks?.length - 1) {
       dispatch(nextTrack(currentTrackList[currentTrackIndex + 1]));
       dispatch(playTrack(true));
     } else {
       console.log('Exit from if else');
     }
   };
-  
+
   const repeatClick = () => {
     audioComponentRef.current.loop = !isRepeat;
     dispatch(setRepeatState(!isRepeat));
@@ -130,8 +130,8 @@ export function Bar({ isPlaying, currentTrack, setIsPlaying }) {
             : Math.trunc(duration % 60)}
         </S.Timer>
         <S.AudioComponent
-          controls
           src={currentTrack.track_file}
+          controls
           ref={audioComponentRef}
           autoPlay
         ></S.AudioComponent>
