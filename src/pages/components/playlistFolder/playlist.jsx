@@ -5,7 +5,7 @@ import { crateTrackList, setCurrentTrack } from '../../store/creators';
 import { useAddLikeMutation, useRemoveLikeMutation } from '../../store/services';
 
 
-export function Playlist({ data = []}) {
+export function Playlist({ data = [] }) {
   const pageType = useSelector((store) => store.AudioPlayer.currentPage);
   const [addLike] = useAddLikeMutation();
   const [removeLike] = useRemoveLikeMutation();
@@ -28,7 +28,7 @@ export function Playlist({ data = []}) {
               </S.TrackTitleImg>
               <>
                 <S.TrackTitleLink>
-                  {track.name} <S.TrackTitleSpan></S.TrackTitleSpan>
+                  {track.name}{' '} <S.TrackTitleSpan></S.TrackTitleSpan>
                 </S.TrackTitleLink>
               </>
             </S.TrackTitle>
@@ -45,7 +45,13 @@ export function Playlist({ data = []}) {
                   ? removeLike(track.id)
                   : addLike(track.id);
             }}>
-              <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
+              {pageType === 'myTracks' ? (
+                <use xlinkHref="img/icon/sprite.svg#icon-activ-like"></use>
+              ) : track.stared_user.some((user) => user['id'] === userId) ? (
+                <use xlinkHref="img/icon/sprite.svg#icon-activ-like"></use>
+              ) : (
+                <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+              )}
             </S.TrackTimeSvg>
             <S.TrackTimeText> {track.duration_in_seconds} </S.TrackTimeText>
           </S.PlaylistTrack>

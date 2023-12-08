@@ -16,7 +16,7 @@ const initialState = {
     playing: false,
     shuffled: false,
     shuffledTrackList: [],
-    currentPage: 'home',
+    currentPage: 'main',
     player: { isRepeat: false, volume: 1, currentTime: 0, duration: 0 },
 };
 

@@ -51,7 +51,7 @@ export function Main({ setActivTrack }) {
         </S.Main>
         {currentTrack && (
           <S.Bar>
-            <Bar currentTrack={currentTrack} />
+            <Bar currentTrack={currentTrack} isPlaying={isPlaying} setIsPlaying={setIsPlaying}/>
           </S.Bar>
         )}
         <footer></footer>

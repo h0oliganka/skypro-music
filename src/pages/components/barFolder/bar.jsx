@@ -12,14 +12,13 @@ import {
 import { useSelector, useDispatch } from 'react-redux'
 import { currentTrackIdSelector } from '../../store/selectors'
 
-export function Bar({ currentTrack }) {
+export function Bar({ isPlaying, currentTrack, setIsPlaying }) {
   const [volume, setVolume] = useState(1);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const isRepeat = useSelector((store) => { store.AudioPlayer.player.isRepeat });
   const tracks = useSelector((store) => { store.AudioPlayer.trackList });
   const shuffledTrackList = useSelector((store) => { store.AudioPlayer.shuffledTrackList });
-  const playingStatus = useSelector((store) => { store.AudioPlayer.playing });
   const shuffleStatus = useSelector((store) => { store.AudioPlayer.shuffled });
   const audioComponentRef = useRef(null);
   const getCurrentTrackList = () => {
@@ -36,14 +35,6 @@ export function Bar({ currentTrack }) {
     (currentTrack) => currentTrack.id === currentTrackId,
   );
   const dispatch = useDispatch();
-  const nextTrackToggle = () => {
-    if (currentTrackIndex < tracks.length - 1) {
-      dispatch(nextTrack(currentTrackList[currentTrackIndex + 1]));
-      dispatch(playTrack(true));
-    } else {
-      console.log('Exit from if else');
-    }
-  };
   const prevTrackToggle = () => {
     if (currentTime < 5) {
       if (currentTrackIndex >= 1) {
@@ -57,15 +48,28 @@ export function Bar({ currentTrack }) {
       ref.currentTime = 0;
     }
   };
+
   const playClick = () => {
-    if (playingStatus) {
+    if (isPlaying) {
       audioComponentRef.current.pause();
+      setIsPlaying(false)
       dispatch(pauseTrack(true));
     } else {
       audioComponentRef.current.play();
+      setIsPlaying(true)
       dispatch(playTrack(true));
     }
   };
+
+  const nextTrackToggle = () => {
+    if (currentTrackIndex < tracks.length - 1) {
+      dispatch(nextTrack(currentTrackList[currentTrackIndex + 1]));
+      dispatch(playTrack(true));
+    } else {
+      console.log('Exit from if else');
+    }
+  };
+  
   const repeatClick = () => {
     audioComponentRef.current.loop = !isRepeat;
     dispatch(setRepeatState(!isRepeat));
@@ -89,7 +93,7 @@ export function Bar({ currentTrack }) {
   useEffect(() => {
     const ref = audioComponentRef.current;
 
-    const timeUpdate = (event) => {
+    const timeUpdate = () => {
       if (ref.currentTime && ref.duration) {
         setCurrentTime(ref.currentTime);
         setDuration(ref.duration);
@@ -155,7 +159,7 @@ export function Bar({ currentTrack }) {
                   alt="play"
                   onClick={playClick}
                 >
-                  {playingStatus ? (
+                  {isPlaying ? (
                     <use xlinkHref="/img/icon/sprite.svg#icon-pause"></use>
                   ) : (
                     <use xlinkHref="/img/icon/sprite.svg#icon-play"></use>
