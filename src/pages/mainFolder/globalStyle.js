@@ -114,6 +114,25 @@ export const GlobalStyle = createGlobalStyle`
     stroke: #ffffff;
     cursor: pointer;
   }
+
+  ._btn-icon:active .track-play__like-svg,
+  ._btn-icon:active .track-play__dislike-svg {
+    fill: #696969;
+    stroke: #ffffff;
+    cursor: pointer;
+  }
+
+  ._btn-text:active {
+    border-color: #ad61ff;
+    color: #ad61ff;
+    cursor: pointer;
+  }
+  
+  ._btn-icon:active svg {
+    fill: transparent;
+    stroke: #ffffff;
+    cursor: pointer;
+  }
   
   ._btn-icon:active .track-play__like-svg,
   ._btn-icon:active .track-play__dislike-svg {

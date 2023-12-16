@@ -159,7 +159,7 @@ export const PlayerBtnShuffleSvg = styled.svg`
   width: 19px;
   height: 12px;
   fill: transparent;
-  stroke: ${(props) => (props.$isRepeat ? 'white' : '#696969')};
+  stroke: ${(props) => (props.$shuffleStatus ? 'white' : '#696969')};
 `
 
 export const PlayerTrackPlay = styled.div`

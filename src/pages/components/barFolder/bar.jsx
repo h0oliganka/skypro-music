@@ -34,6 +34,14 @@ export function Bar({ isPlaying, currentTrack, setIsPlaying }) {
   const currentTrackIndex = currentTrackList?.findIndex(
     (currentTrack) => currentTrack.id === currentTrackId,
   );
+  const nextTrackToggle = () => {
+    if (currentTrackIndex < tracks?.length - 1) {
+      dispatch(nextTrack(currentTrackList[currentTrackIndex + 1]));
+      dispatch(playTrack(true));
+    } else {
+      console.log('Exit from if else');
+    }
+  };
   const dispatch = useDispatch();
   const prevTrackToggle = () => {
     if (currentTime < 5) {
@@ -61,15 +69,6 @@ export function Bar({ isPlaying, currentTrack, setIsPlaying }) {
     }
   };
 
-  const nextTrackToggle = () => {
-    if (currentTrackIndex < tracks?.length - 1) {
-      dispatch(nextTrack(currentTrackList[currentTrackIndex + 1]));
-      dispatch(playTrack(true));
-    } else {
-      console.log('Exit from if else');
-    }
-  };
-
   const repeatClick = () => {
     audioComponentRef.current.loop = !isRepeat;
     dispatch(setRepeatState(!isRepeat));
@@ -84,7 +83,7 @@ export function Bar({ isPlaying, currentTrack, setIsPlaying }) {
   };
 
   const shuffleToggle = () => {
-    if (shuffleStatus === false) {
+    if (shuffleStatus === true) {
       dispatch(shuffleTracks(true, [...tracks].sort(() => Math.random() - 0.5)));
     } else {
       dispatch(shuffleTracks(false, []));
